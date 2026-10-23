@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- ===== DUO MARINE CONFIG — paste your Web3Forms access key below ===== -->
+<script>window.DUO_WEB3FORMS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY';</script>
+<!-- ===================================================================== -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#071B2B">
+<!-- Painted before anything else parses, so the very first frame is brand blue
+     rather than the browser's default white. -->
+<style>
+/* !important because the editor host injects its own html,body background
+   later in the cascade — without it the first frame flashes the host's white. */
+html{background:#071B2B!important}
+body{margin:0;background:#071B2B!important}
+body[data-booted]{background:#FDF9F5!important}
+</style>
+<script src="./support.js"></script>
+</head>
+<body style="background:#071B2B">
+<x-dc>
+<helmet>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DUO MARINE — Performance and comfort at sea</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Funnel+Sans:ital,wght@0,300..800;1,300..800&amp;family=Lexend+Peta:wght@100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0&amp;display=swap" rel="stylesheet">
+<template id="__bundler_thumbnail"><style>html,body{margin:0;background:#071B2B!important}</style><div style="position:fixed;inset:0;z-index:2147483647;display:grid;place-items:center;background:#071B2B;padding:30%;box-sizing:border-box"><i style="display:block;width:100%;max-width:260px;aspect-ratio:279/105;background:#FDF9F5;-webkit-mask:url(&quot;data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjc5IiBoZWlnaHQ9IjEwNSIgdmlld0JveD0iMCAwIDI3OSAxMDUiIGZpbGw9IiMwMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0yMDkuMjQ0IDYyLjQ3NjZDMjE4Ljk5MyA2Mi40NzY2IDIyNi41ODcgNjQuNDM2OCAyMzMuMDI2IDY3LjUxNDZDMjM5LjMxNSA3MC41MjA1IDI0NC4yNzUgNzQuNTA1NCAyNDguNTYzIDc3LjkyMTlDMjUyLjk5NCA4MS40NTEyIDI1Ni43NTUgODQuNDEyNyAyNjEuMzY1IDg2LjYxNjJDMjY1LjgyNSA4OC43NDc3IDI3MS4zMSA5MC4yNjA3IDI3OSA5MC4yNjA3VjEwNC41MTdDMjY5LjI1MSAxMDQuNTE3IDI2MS42NTcgMTAyLjU1NiAyNTUuMjE4IDk5LjQ3ODVDMjQ4LjkyOSA5Ni40NzI2IDI0My45NjkgOTIuNDg3NyAyMzkuNjgxIDg5LjA3MTNDMjM1LjI1IDg1LjU0MTkgMjMxLjQ4OSA4Mi41ODA1IDIyNi44NzkgODAuMzc3QzIyMi40MTkgNzguMjQ1NSAyMTYuOTM0IDc2LjczMjUgMjA5LjI0NCA3Ni43MzI0QzIwMS41NTQgNzYuNzMyNCAxOTYuMDY3IDc4LjI0NTEgMTkxLjYwNCA4MC4zNzdDMTg2Ljk5MiA4Mi41ODA4IDE4My4yMjkgODUuNTQzMiAxNzguNzk3IDg5LjA3MjNDMTc0LjUwNyA5Mi40ODgyIDE2OS41NDggOTYuNDcxOSAxNjMuMjYxIDk5LjQ3NzVDMTU2LjgyMyAxMDIuNTU1IDE0OS4yMzEgMTA0LjUxNyAxMzkuNDg3IDEwNC41MTdDMTI5Ljc0NCAxMDQuNTE3IDEyMi4xNTQgMTAyLjU1NiAxMTUuNzE4IDk5LjQ3NzVDMTA5LjQzMyA5Ni40NzE2IDEwNC40NzYgOTIuNDg3MiAxMDAuMTg5IDg5LjA3MTNDOTUuNzYwNyA4NS41NDIxIDkyLjAwMDMgODIuNTgwNCA4Ny4zOTA2IDgwLjM3N0M4Mi45MzE1IDc4LjI0NTUgNzcuNDQ1OCA3Ni43MzI0IDY5Ljc1NTkgNzYuNzMyNEM2Mi4wNjYxIDc2LjczMjUgNTYuNTc4MiA3OC4yNDUxIDUyLjExNjIgODAuMzc3QzQ3LjUwMzcgODIuNTgwOCA0My43NDAzIDg1LjU0MzIgMzkuMzA4NiA4OS4wNzIzQzM1LjAxODggOTIuNDg4MyAzMC4wNTk1IDk2LjQ3MiAyMy43NzI1IDk5LjQ3NzVDMTcuMzM0MyAxMDIuNTU1IDkuNzQzNzYgMTA0LjUxNyAwIDEwNC41MTdWOTAuMjYwN0M3LjY4MjkgOTAuMjYwNyAxMy4xNjUxIDg4Ljc0NzggMTcuNjI0IDg2LjYxNjJDMjIuMjM0IDg0LjQxMjQgMjUuOTk2IDgxLjQ1MDggMzAuNDI4NyA3Ny45MjA5QzM0LjcxOTQgNzQuNTA0MSAzOS42ODAyIDcwLjUyMDIgNDUuOTcwNyA2Ny41MTQ2QzUyLjQxMTggNjQuNDM3MiA2MC4wMDY5IDYyLjQ3NjYgNjkuNzU1OSA2Mi40NzY2Qzc5LjUwNDcgNjIuNDc2NiA4Ny4wOTg3IDY0LjQzNjggOTMuNTM4MSA2Ny41MTQ2Qzk5LjgyNjkgNzAuNTIwNyAxMDQuNzg2IDc0LjUwNTEgMTA5LjA3MyA3Ny45MjE5QzExMy41MDMgODEuNDUxOCAxMTcuMjYxIDg0LjQxMzggMTIxLjg2OCA4Ni42MTcyQzEyNi4zMjQgODguNzQ4MyAxMzEuODA1IDkwLjI2MDcgMTM5LjQ4NyA5MC4yNjA3QzE0Ny4xNyA5MC4yNjA3IDE1Mi42NTMgODguNzQ3OCAxNTcuMTEyIDg2LjYxNjJDMTYxLjcyMiA4NC40MTI0IDE2NS40ODQgODEuNDUwNiAxNjkuOTE2IDc3LjkyMDlDMTc0LjIwNyA3NC41MDQxIDE3OS4xNjggNzAuNTIwMyAxODUuNDU5IDY3LjUxNDZDMTkxLjkgNjQuNDM3MiAxOTkuNDk1IDYyLjQ3NjYgMjA5LjI0NCA2Mi40NzY2Wk0yMDkuMjQ0IDBDMjE4Ljk5MyAzLjg3MjE2ZS0wNSAyMjYuNTg3IDEuOTYwMjEgMjMzLjAyNiA1LjAzODA5QzIzOS4zMTUgOC4wNDM5NiAyNDQuMjc1IDEyLjAyNzkgMjQ4LjU2MyAxNS40NDQzQzI1Mi45OTQgMTguOTczOCAyNTYuNzU1IDIxLjkzNjEgMjYxLjM2NSAyNC4xMzk2QzI2NS44MjUgMjYuMjcxMSAyNzEuMzEgMjcuNzg0MiAyNzkgMjcuNzg0MlY0Mi4wMzkxQzI2OS4yNTEgNDIuMDM5MSAyNjEuNjU4IDQwLjA3ODkgMjU1LjIxOCAzNy4wMDFDMjQ4LjkyOSAzMy45OTUxIDI0My45NjkgMzAuMDExMiAyMzkuNjgxIDI2LjU5NDdDMjM1LjI1IDIzLjA2NTMgMjMxLjQ4OSAyMC4xMDM5IDIyNi44NzkgMTcuOTAwNEMyMjIuNDE5IDE1Ljc2ODkgMjE2LjkzNCAxNC4yNTU5IDIwOS4yNDQgMTQuMjU1OUMyMDEuNTU0IDE0LjI1NTkgMTk2LjA2NyAxNS43Njg1IDE5MS42MDQgMTcuOTAwNEMxODYuOTkyIDIwLjEwNDIgMTgzLjIyOSAyMy4wNjY2IDE3OC43OTcgMjYuNTk1N0MxNzQuNTA3IDMwLjAxMTcgMTY5LjU0OCAzMy45OTU0IDE2My4yNjEgMzcuMDAxQzE1Ni44MjMgNDAuMDc4OCAxNDkuMjMxIDQyLjAzOTEgMTM5LjQ4NyA0Mi4wMzkxQzEyOS43NDQgNDIuMDM5IDEyMi4xNTQgNDAuMDc5MiAxMTUuNzE4IDM3LjAwMUMxMDkuNDMyIDMzLjk5NDkgMTA0LjQ3NiAzMC4wMDk3IDEwMC4xODkgMjYuNTkzOEM5NS43NjA3IDIzLjA2NDYgOTIuMDAwMyAyMC4xMDM4IDg3LjM5MDYgMTcuOTAwNEM4Mi45MzE1IDE1Ljc2OSA3Ny40NDU4IDE0LjI1NTkgNjkuNzU1OSAxNC4yNTU5QzYyLjA2NjEgMTQuMjU1OSA1Ni41NzgyIDE1Ljc2ODUgNTIuMTE2MiAxNy45MDA0QzQ3LjUwMzggMjAuMTA0MiA0My43NDAzIDIzLjA2NjcgMzkuMzA4NiAyNi41OTU3QzM1LjAxODkgMzAuMDExNyAzMC4wNTk0IDMzLjk5NTQgMjMuNzcyNSAzNy4wMDFDMTcuMzM0MyA0MC4wNzg4IDkuNzQzNzMgNDIuMDM5MSAwIDQyLjAzOTFWMjcuNzg0MkM3LjY4Mjg2IDI3Ljc4NDIgMTMuMTY1MSAyNi4yNzEyIDE3LjYyNCAyNC4xMzk2QzIyLjIzMzkgMjEuOTM1OCAyNS45OTYgMTguOTc0MiAzMC40Mjg3IDE1LjQ0NDNDMzQuNzE5NCAxMi4wMjc2IDM5LjY4MDIgOC4wNDM2NyA0NS45NzA3IDUuMDM4MDlDNTIuNDExOCAxLjk2MDU5IDYwLjAwNjkgMy44NTE5MmUtMDUgNjkuNzU1OSAwQzc5LjUwNDcgMi4zODQxM2UtMDYgODcuMDk4NyAxLjk2MDE4IDkzLjUzODEgNS4wMzgwOUM5OS44MjcgOC4wNDQxMyAxMDQuNzg2IDEyLjAyODUgMTA5LjA3MyAxNS40NDUzQzExMy41MDMgMTguOTc1MyAxMTcuMjYxIDIxLjkzNzIgMTIxLjg2OCAyNC4xNDA2QzEyNi4zMjQgMjYuMjcxNyAxMzEuODA1IDI3Ljc4NDEgMTM5LjQ4NyAyNy43ODQyQzE0Ny4xNyAyNy43ODQyIDE1Mi42NTMgMjYuMjcxMyAxNTcuMTEyIDI0LjEzOTZDMTYxLjcyMiAyMS45MzU5IDE2NS40ODQgMTguOTc0IDE2OS45MTYgMTUuNDQ0M0MxNzQuMjA3IDEyLjAyNzUgMTc5LjE2OCA4LjA0MzY5IDE4NS40NTkgNS4wMzgwOUMxOTEuOSAxLjk2MDU4IDE5OS40OTUgLTIuMzg0MTdlLTA2IDIwOS4yNDQgMFoiIGZpbGw9IiMwNzFCMkIiPjwvcGF0aD4KPC9zdmc+&quot;) center/contain no-repeat;mask:url(&quot;data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjc5IiBoZWlnaHQ9IjEwNSIgdmlld0JveD0iMCAwIDI3OSAxMDUiIGZpbGw9IiMwMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0yMDkuMjQ0IDYyLjQ3NjZDMjE4Ljk5MyA2Mi40NzY2IDIyNi41ODcgNjQuNDM2OCAyMzMuMDI2IDY3LjUxNDZDMjM5LjMxNSA3MC41MjA1IDI0NC4yNzUgNzQuNTA1NCAyNDguNTYzIDc3LjkyMTlDMjUyLjk5NCA4MS40NTEyIDI1Ni43NTUgODQuNDEyNyAyNjEuMzY1IDg2LjYxNjJDMjY1LjgyNSA4OC43NDc3IDI3MS4zMSA5MC4yNjA3IDI3OSA5MC4yNjA3VjEwNC41MTdDMjY5LjI1MSAxMDQuNTE3IDI2MS42NTcgMTAyLjU1NiAyNTUuMjE4IDk5LjQ3ODVDMjQ4LjkyOSA5Ni40NzI2IDI0My45NjkgOTIuNDg3NyAyMzkuNjgxIDg5LjA3MTNDMjM1LjI1IDg1LjU0MTkgMjMxLjQ4OSA4Mi41ODA1IDIyNi44NzkgODAuMzc3QzIyMi40MTkgNzguMjQ1NSAyMTYuOTM0IDc2LjczMjUgMjA5LjI0NCA3Ni43MzI0QzIwMS41NTQgNzYuNzMyNCAxOTYuMDY3IDc4LjI0NTEgMTkxLjYwNCA4MC4zNzdDMTg2Ljk5MiA4Mi41ODA4IDE4My4yMjkgODUuNTQzMiAxNzguNzk3IDg5LjA3MjNDMTc0LjUwNyA5Mi40ODgyIDE2OS41NDggOTYuNDcxOSAxNjMuMjYxIDk5LjQ3NzVDMTU2LjgyMyAxMDIuNTU1IDE0OS4yMzEgMTA0LjUxNyAxMzkuNDg3IDEwNC41MTdDMTI5Ljc0NCAxMDQuNTE3IDEyMi4xNTQgMTAyLjU1NiAxMTUuNzE4IDk5LjQ3NzVDMTA5LjQzMyA5Ni40NzE2IDEwNC40NzYgOTIuNDg3MiAxMDAuMTg5IDg5LjA3MTNDOTUuNzYwNyA4NS41NDIxIDkyLjAwMDMgODIuNTgwNCA4Ny4zOTA2IDgwLjM3N0M4Mi45MzE1IDc4LjI0NTUgNzcuNDQ1OCA3Ni43MzI0IDY5Ljc1NTkgNzYuNzMyNEM2Mi4wNjYxIDc2LjczMjUgNTYuNTc4MiA3OC4yNDUxIDUyLjExNjIgODAuMzc3QzQ3LjUwMzcgODIuNTgwOCA0My43NDAzIDg1LjU0MzIgMzkuMzA4NiA4OS4wNzIzQzM1LjAxODggOTIuNDg4MyAzMC4wNTk1IDk2LjQ3MiAyMy43NzI1IDk5LjQ3NzVDMTcuMzM0MyAxMDIuNTU1IDkuNzQzNzYgMTA0LjUxNyAwIDEwNC41MTdWOTAuMjYwN0M3LjY4MjkgOTAuMjYwNyAxMy4xNjUxIDg4Ljc0NzggMTcuNjI0IDg2LjYxNjJDMjIuMjM0IDg0LjQxMjQgMjUuOTk2IDgxLjQ1MDggMzAuNDI4NyA3Ny45MjA5QzM0LjcxOTQgNzQuNTA0MSAzOS42ODAyIDcwLjUyMDIgNDUuOTcwNyA2Ny41MTQ2QzUyLjQxMTggNjQuNDM3MiA2MC4wMDY5IDYyLjQ3NjYgNjkuNzU1OSA2Mi40NzY2Qzc5LjUwNDcgNjIuNDc2NiA4Ny4wOTg3IDY0LjQzNjggOTMuNTM4MSA2Ny41MTQ2Qzk5LjgyNjkgNzAuNTIwNyAxMDQuNzg2IDc0LjUwNTEgMTA5LjA3MyA3Ny45MjE5QzExMy41MDMgODEuNDUxOCAxMTcuMjYxIDg0LjQxMzggMTIxLjg2OCA4Ni42MTcyQzEyNi4zMjQgODguNzQ4MyAxMzEuODA1IDkwLjI2MDcgMTM5LjQ4NyA5MC4yNjA3QzE0Ny4xNyA5MC4yNjA3IDE1Mi42NTMgODguNzQ3OCAxNTcuMTEyIDg2LjYxNjJDMTYxLjcyMiA4NC40MTI0IDE2NS40ODQgODEuNDUwNiAxNjkuOTE2IDc3LjkyMDlDMTc0LjIwNyA3NC41MDQxIDE3OS4xNjggNzAuNTIwMyAxODUuNDU5IDY3LjUxNDZDMTkxLjkgNjQuNDM3MiAxOTkuNDk1IDYyLjQ3NjYgMjA5LjI0NCA2Mi40NzY2Wk0yMDkuMjQ0IDBDMjE4Ljk5MyAzLjg3MjE2ZS0wNSAyMjYuNTg3IDEuOTYwMjEgMjMzLjAyNiA1LjAzODA5QzIzOS4zMTUgOC4wNDM5NiAyNDQuMjc1IDEyLjAyNzkgMjQ4LjU2MyAxNS40NDQzQzI1Mi45OTQgMTguOTczOCAyNTYuNzU1IDIxLjkzNjEgMjYxLjM2NSAyNC4xMzk2QzI2NS44MjUgMjYuMjcxMSAyNzEuMzEgMjcuNzg0MiAyNzkgMjcuNzg0MlY0Mi4wMzkxQzI2OS4yNTEgNDIuMDM5MSAyNjEuNjU4IDQwLjA3ODkgMjU1LjIxOCAzNy4wMDFDMjQ4LjkyOSAzMy45OTUxIDI0My45NjkgMzAuMDExMiAyMzkuNjgxIDI2LjU5NDdDMjM1LjI1IDIzLjA2NTMgMjMxLjQ4OSAyMC4xMDM5IDIyNi44NzkgMTcuOTAwNEMyMjIuNDE5IDE1Ljc2ODkgMjE2LjkzNCAxNC4yNTU5IDIwOS4yNDQgMTQuMjU1OUMyMDEuNTU0IDE0LjI1NTkgMTk2LjA2NyAxNS43Njg1IDE5MS42MDQgMTcuOTAwNEMxODYuOTkyIDIwLjEwNDIgMTgzLjIyOSAyMy4wNjY2IDE3OC43OTcgMjYuNTk1N0MxNzQuNTA3IDMwLjAxMTcgMTY5LjU0OCAzMy45OTU0IDE2My4yNjEgMzcuMDAxQzE1Ni44MjMgNDAuMDc4OCAxNDkuMjMxIDQyLjAzOTEgMTM5LjQ4NyA0Mi4wMzkxQzEyOS43NDQgNDIuMDM5IDEyMi4xNTQgNDAuMDc5MiAxMTUuNzE4IDM3LjAwMUMxMDkuNDMyIDMzLjk5NDkgMTA0LjQ3NiAzMC4wMDk3IDEwMC4xODkgMjYuNTkzOEM5NS43NjA3IDIzLjA2NDYgOTIuMDAwMyAyMC4xMDM4IDg3LjM5MDYgMTcuOTAwNEM4Mi45MzE1IDE1Ljc2OSA3Ny40NDU4IDE0LjI1NTkgNjkuNzU1OSAxNC4yNTU5QzYyLjA2NjEgMTQuMjU1OSA1Ni41NzgyIDE1Ljc2ODUgNTIuMTE2MiAxNy45MDA0QzQ3LjUwMzggMjAuMTA0MiA0My43NDAzIDIzLjA2NjcgMzkuMzA4NiAyNi41OTU3QzM1LjAxODkgMzAuMDExNyAzMC4wNTk0IDMzLjk5NTQgMjMuNzcyNSAzNy4wMDFDMTcuMzM0MyA0MC4wNzg4IDkuNzQzNzMgNDIuMDM5MSAwIDQyLjAzOTFWMjcuNzg0MkM3LjY4Mjg2IDI3Ljc4NDIgMTMuMTY1MSAyNi4yNzEyIDE3LjYyNCAyNC4xMzk2QzIyLjIzMzkgMjEuOTM1OCAyNS45OTYgMTguOTc0MiAzMC40Mjg3IDE1LjQ0NDNDMzQuNzE5NCAxMi4wMjc2IDM5LjY4MDIgOC4wNDM2NyA0NS45NzA3IDUuMDM4MDlDNTIuNDExOCAxLjk2MDU5IDYwLjAwNjkgMy44NTE5MmUtMDUgNjkuNzU1OSAwQzc5LjUwNDcgMi4zODQxM2UtMDYgODcuMDk4NyAxLjk2MDE4IDkzLjUzODEgNS4wMzgwOUM5OS44MjcgOC4wNDQxMyAxMDQuNzg2IDEyLjAyODUgMTA5LjA3MyAxNS40NDUzQzExMy41MDMgMTguOTc1MyAxMTcuMjYxIDIxLjkzNzIgMTIxLjg2OCAyNC4xNDA2QzEyNi4zMjQgMjYuMjcxNyAxMzEuODA1IDI3Ljc4NDEgMTM5LjQ4NyAyNy43ODQyQzE0Ny4xNyAyNy43ODQyIDE1Mi42NTMgMjYuMjcxMyAxNTcuMTEyIDI0LjEzOTZDMTYxLjcyMiAyMS45MzU5IDE2NS40ODQgMTguOTc0IDE2OS45MTYgMTUuNDQ0M0MxNzQuMjA3IDEyLjAyNzUgMTc5LjE2OCA4LjA0MzY5IDE4NS40NTkgNS4wMzgwOUMxOTEuOSAxLjk2MDU4IDE5OS40OTUgLTIuMzg0MTdlLTA2IDIwOS4yNDQgMFoiIGZpbGw9IiMwNzFCMkIiPjwvcGF0aD4KPC9zdmc+&quot;) center/contain no-repeat"></i></div></template>
+<style>
+  @font-face { font-family: 'Barlow'; src: url('assets/fonts/Barlow-ExtraLight.ttf') format('truetype'); font-weight: 200; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Barlow'; src: url('assets/fonts/Barlow-ExtraLightItalic.ttf') format('truetype'); font-weight: 200; font-style: italic; font-display: swap; }
+  @font-face { font-family: 'Barlow'; src: url('assets/fonts/Barlow-Light.ttf') format('truetype'); font-weight: 300; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Barlow'; src: url('assets/fonts/Barlow-Italic.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
+  @font-face { font-family: 'Barlow'; src: url('assets/fonts/Barlow-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Barlow'; src: url('assets/fonts/Barlow-BoldItalic.ttf') format('truetype'); font-weight: 700; font-style: italic; font-display: swap; }
+  @font-face { font-family: 'Barlow'; src: url('assets/fonts/Barlow-ExtraBold.ttf') format('truetype'); font-weight: 800; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Barlow'; src: url('assets/fonts/Barlow-ExtraBoldItalic.ttf') format('truetype'); font-weight: 800; font-style: italic; font-display: swap; }
+  @font-face { font-family: 'Barlow'; src: url('assets/fonts/Barlow-Black.ttf') format('truetype'); font-weight: 900; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Barlow'; src: url('assets/fonts/Barlow-BlackItalic.ttf') format('truetype'); font-weight: 900; font-style: italic; font-display: swap; }
+  @font-face { font-family: 'Funnel Sans'; src: url('assets/fonts/FunnelSans-Light.ttf') format('truetype'); font-weight: 300; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Funnel Sans'; src: url('assets/fonts/FunnelSans-LightItalic.ttf') format('truetype'); font-weight: 300; font-style: italic; font-display: swap; }
+  @font-face { font-family: 'Funnel Sans'; src: url('assets/fonts/FunnelSans-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Funnel Sans'; src: url('assets/fonts/FunnelSans-Italic.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
+  @font-face { font-family: 'Funnel Sans'; src: url('assets/fonts/FunnelSans-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Funnel Sans'; src: url('assets/fonts/FunnelSans-MediumItalic.ttf') format('truetype'); font-weight: 500; font-style: italic; font-display: swap; }
+  @font-face { font-family: 'Funnel Sans'; src: url('assets/fonts/FunnelSans-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Funnel Sans'; src: url('assets/fonts/FunnelSans-BoldItalic.ttf') format('truetype'); font-weight: 700; font-style: italic; font-display: swap; }
+  @font-face { font-family: 'Funnel Sans'; src: url('assets/fonts/FunnelSans-ExtraBold.ttf') format('truetype'); font-weight: 800; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Funnel Sans'; src: url('assets/fonts/FunnelSans-ExtraBoldItalic.ttf') format('truetype'); font-weight: 800; font-style: italic; font-display: swap; }
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; background: #071B2B; }
+  body { margin: 0; background: #071B2B; -webkit-font-smoothing: antialiased; }
+  /* The page's own foam ground only arrives once boot completes, so the
+     wrapper can't flash white/foam between markup streaming and mount. */
+  body[data-booted] { background: #FDF9F5; }
+  /* The overlay ships hidden and is opened by an attribute, never by a
+     template hole — so a streaming render can't flash it on screen. */
+  body[data-lb] #lightbox { display: flex !important; animation: fade .3s ease both; }
+  body[data-lead] #leadpage { display: block !important; animation: fade .35s ease both; }
+  body[data-lead] { overflow: hidden; }
+  #leadpage input::placeholder, #leadpage textarea::placeholder { color: rgba(253,249,245,.38); }
+  #leadpage select option { color: #071B2B; }
+  body:not([data-booted]) #dc-root > * > div { background: #071B2B !important; }
+  * { box-sizing: border-box; }
+  a { color: #071B2B; text-decoration: none; }
+  a:hover { color: #F47F4B; }
+  [data-shot]:nth-child(n+7) { display: none !important; }
+  [data-shot] { aspect-ratio: 1 / 1 !important; grid-column: auto !important; }
+  .shot-veil { opacity: 0; transition: opacity .4s ease; }
+  [data-shot]:hover .shot-veil { opacity: .45; }
+  .shot-img { opacity: 0; transition: opacity .55s ease; }
+  .shot-img[data-ready] { opacity: 1; }
+  .shot-skin { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+    background: rgba(7,27,43,.045); overflow: hidden; transition: opacity .4s ease; }
+  .shot-img[data-ready] + .shot-veil, .shot-img[data-ready] { z-index: 1; }
+  [data-shot] .shot-img[data-ready] ~ .shot-skin, .shot-skin[data-done] { opacity: 0; }
+  .shot-mark { display: block; width: min(46%,88px); aspect-ratio: 279/105; background: #071B2B; opacity: .26;
+    -webkit-mask: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjc5IiBoZWlnaHQ9IjEwNSIgdmlld0JveD0iMCAwIDI3OSAxMDUiIGZpbGw9IiMwMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0yMDkuMjQ0IDYyLjQ3NjZDMjE4Ljk5MyA2Mi40NzY2IDIyNi41ODcgNjQuNDM2OCAyMzMuMDI2IDY3LjUxNDZDMjM5LjMxNSA3MC41MjA1IDI0NC4yNzUgNzQuNTA1NCAyNDguNTYzIDc3LjkyMTlDMjUyLjk5NCA4MS40NTEyIDI1Ni43NTUgODQuNDEyNyAyNjEuMzY1IDg2LjYxNjJDMjY1LjgyNSA4OC43NDc3IDI3MS4zMSA5MC4yNjA3IDI3OSA5MC4yNjA3VjEwNC41MTdDMjY5LjI1MSAxMDQuNTE3IDI2MS42NTcgMTAyLjU1NiAyNTUuMjE4IDk5LjQ3ODVDMjQ4LjkyOSA5Ni40NzI2IDI0My45NjkgOTIuNDg3NyAyMzkuNjgxIDg5LjA3MTNDMjM1LjI1IDg1LjU0MTkgMjMxLjQ4OSA4Mi41ODA1IDIyNi44NzkgODAuMzc3QzIyMi40MTkgNzguMjQ1NSAyMTYuOTM0IDc2LjczMjUgMjA5LjI0NCA3Ni43MzI0QzIwMS41NTQgNzYuNzMyNCAxOTYuMDY3IDc4LjI0NTEgMTkxLjYwNCA4MC4zNzdDMTg2Ljk5MiA4Mi41ODA4IDE4My4yMjkgODUuNTQzMiAxNzguNzk3IDg5LjA3MjNDMTc0LjUwNyA5Mi40ODgyIDE2OS41NDggOTYuNDcxOSAxNjMuMjYxIDk5LjQ3NzVDMTU2LjgyMyAxMDIuNTU1IDE0OS4yMzEgMTA0LjUxNyAxMzkuNDg3IDEwNC41MTdDMTI5Ljc0NCAxMDQuNTE3IDEyMi4xNTQgMTAyLjU1NiAxMTUuNzE4IDk5LjQ3NzVDMTA5LjQzMyA5Ni40NzE2IDEwNC40NzYgOTIuNDg3MiAxMDAuMTg5IDg5LjA3MTNDOTUuNzYwNyA4NS41NDIxIDkyLjAwMDMgODIuNTgwNCA4Ny4zOTA2IDgwLjM3N0M4Mi45MzE1IDc4LjI0NTUgNzcuNDQ1OCA3Ni43MzI0IDY5Ljc1NTkgNzYuNzMyNEM2Mi4wNjYxIDc2LjczMjUgNTYuNTc4MiA3OC4yNDUxIDUyLjExNjIgODAuMzc3QzQ3LjUwMzcgODIuNTgwOCA0My43NDAzIDg1LjU0MzIgMzkuMzA4NiA4OS4wNzIzQzM1LjAxODggOTIuNDg4MyAzMC4wNTk1IDk2LjQ3MiAyMy43NzI1IDk5LjQ3NzVDMTcuMzM0MyAxMDIuNTU1IDkuNzQzNzYgMTA0LjUxNyAwIDEwNC41MTdWOTAuMjYwN0M3LjY4MjkgOTAuMjYwNyAxMy4xNjUxIDg4Ljc0NzggMTcuNjI0IDg2LjYxNjJDMjIuMjM0IDg0LjQxMjQgMjUuOTk2IDgxLjQ1MDggMzAuNDI4NyA3Ny45MjA5QzM0LjcxOTQgNzQuNTA0MSAzOS42ODAyIDcwLjUyMDIgNDUuOTcwNyA2Ny41MTQ2QzUyLjQxMTggNjQuNDM3MiA2MC4wMDY5IDYyLjQ3NjYgNjkuNzU1OSA2Mi40NzY2Qzc5LjUwNDcgNjIuNDc2NiA4Ny4wOTg3IDY0LjQzNjggOTMuNTM4MSA2Ny41MTQ2Qzk5LjgyNjkgNzAuNTIwNyAxMDQuNzg2IDc0LjUwNTEgMTA5LjA3MyA3Ny45MjE5QzExMy41MDMgODEuNDUxOCAxMTcuMjYxIDg0LjQxMzggMTIxLjg2OCA4Ni42MTcyQzEyNi4zMjQgODguNzQ4MyAxMzEuODA1IDkwLjI2MDcgMTM5LjQ4NyA5MC4yNjA3QzE0Ny4xNyA5MC4yNjA3IDE1Mi42NTMgODguNzQ3OCAxNTcuMTEyIDg2LjYxNjJDMTYxLjcyMiA4NC40MTI0IDE2NS40ODQgODEuNDUwNiAxNjkuOTE2IDc3LjkyMDlDMTc0LjIwNyA3NC41MDQxIDE3OS4xNjggNzAuNTIwMyAxODUuNDU5IDY3LjUxNDZDMTkxLjkgNjQuNDM3MiAxOTkuNDk1IDYyLjQ3NjYgMjA5LjI0NCA2Mi40NzY2Wk0yMDkuMjQ0IDBDMjE4Ljk5MyAzLjg3MjE2ZS0wNSAyMjYuNTg3IDEuOTYwMjEgMjMzLjAyNiA1LjAzODA5QzIzOS4zMTUgOC4wNDM5NiAyNDQuMjc1IDEyLjAyNzkgMjQ4LjU2MyAxNS40NDQzQzI1Mi45OTQgMTguOTczOCAyNTYuNzU1IDIxLjkzNjEgMjYxLjM2NSAyNC4xMzk2QzI2NS44MjUgMjYuMjcxMSAyNzEuMzEgMjcuNzg0MiAyNzkgMjcuNzg0MlY0Mi4wMzkxQzI2OS4yNTEgNDIuMDM5MSAyNjEuNjU4IDQwLjA3ODkgMjU1LjIxOCAzNy4wMDFDMjQ4LjkyOSAzMy45OTUxIDI0My45NjkgMzAuMDExMiAyMzkuNjgxIDI2LjU5NDdDMjM1LjI1IDIzLjA2NTMgMjMxLjQ4OSAyMC4xMDM5IDIyNi44NzkgMTcuOTAwNEMyMjIuNDE5IDE1Ljc2ODkgMjE2LjkzNCAxNC4yNTU5IDIwOS4yNDQgMTQuMjU1OUMyMDEuNTU0IDE0LjI1NTkgMTk2LjA2NyAxNS43Njg1IDE5MS42MDQgMTcuOTAwNEMxODYuOTkyIDIwLjEwNDIgMTgzLjIyOSAyMy4wNjY2IDE3OC43OTcgMjYuNTk1N0MxNzQuNTA3IDMwLjAxMTcgMTY5LjU0OCAzMy45OTU0IDE2My4yNjEgMzcuMDAxQzE1Ni44MjMgNDAuMDc4OCAxNDkuMjMxIDQyLjAzOTEgMTM5LjQ4NyA0Mi4wMzkxQzEyOS43NDQgNDIuMDM5IDEyMi4xNTQgNDAuMDc5MiAxMTUuNzE4IDM3LjAwMUMxMDkuNDMyIDMzLjk5NDkgMTA0LjQ3NiAzMC4wMDk3IDEwMC4xODkgMjYuNTkzOEM5NS43NjA3IDIzLjA2NDYgOTIuMDAwMyAyMC4xMDM4IDg3LjM5MDYgMTcuOTAwNEM4Mi45MzE1IDE1Ljc2OSA3Ny40NDU4IDE0LjI1NTkgNjkuNzU1OSAxNC4yNTU5QzYyLjA2NjEgMTQuMjU1OSA1Ni41NzgyIDE1Ljc2ODUgNTIuMTE2MiAxNy45MDA0QzQ3LjUwMzggMjAuMTA0MiA0My43NDAzIDIzLjA2NjcgMzkuMzA4NiAyNi41OTU3QzM1LjAxODkgMzAuMDExNyAzMC4wNTk0IDMzLjk5NTQgMjMuNzcyNSAzNy4wMDFDMTcuMzM0MyA0MC4wNzg4IDkuNzQzNzMgNDIuMDM5MSAwIDQyLjAzOTFWMjcuNzg0MkM3LjY4Mjg2IDI3Ljc4NDIgMTMuMTY1MSAyNi4yNzEyIDE3LjYyNCAyNC4xMzk2QzIyLjIzMzkgMjEuOTM1OCAyNS45OTYgMTguOTc0MiAzMC40Mjg3IDE1LjQ0NDNDMzQuNzE5NCAxMi4wMjc2IDM5LjY4MDIgOC4wNDM2NyA0NS45NzA3IDUuMDM4MDlDNTIuNDExOCAxLjk2MDU5IDYwLjAwNjkgMy44NTE5MmUtMDUgNjkuNzU1OSAwQzc5LjUwNDcgMi4zODQxM2UtMDYgODcuMDk4NyAxLjk2MDE4IDkzLjUzODEgNS4wMzgwOUM5OS44MjcgOC4wNDQxMyAxMDQuNzg2IDEyLjAyODUgMTA5LjA3MyAxNS40NDUzQzExMy41MDMgMTguOTc1MyAxMTcuMjYxIDIxLjkzNzIgMTIxLjg2OCAyNC4xNDA2QzEyNi4zMjQgMjYuMjcxNyAxMzEuODA1IDI3Ljc4NDEgMTM5LjQ4NyAyNy43ODQyQzE0Ny4xNyAyNy43ODQyIDE1Mi42NTMgMjYuMjcxMyAxNTcuMTEyIDI0LjEzOTZDMTYxLjcyMiAyMS45MzU5IDE2NS40ODQgMTguOTc0IDE2OS45MTYgMTUuNDQ0M0MxNzQuMjA3IDEyLjAyNzUgMTc5LjE2OCA4LjA0MzY5IDE4NS40NTkgNS4wMzgwOUMxOTEuOSAxLjk2MDU4IDE5OS40OTUgLTIuMzg0MTdlLTA2IDIwOS4yNDQgMFoiIGZpbGw9IiMwNzFCMkIiPjwvcGF0aD4KPC9zdmc+") center/contain no-repeat;
+    mask: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjc5IiBoZWlnaHQ9IjEwNSIgdmlld0JveD0iMCAwIDI3OSAxMDUiIGZpbGw9IiMwMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0yMDkuMjQ0IDYyLjQ3NjZDMjE4Ljk5MyA2Mi40NzY2IDIyNi41ODcgNjQuNDM2OCAyMzMuMDI2IDY3LjUxNDZDMjM5LjMxNSA3MC41MjA1IDI0NC4yNzUgNzQuNTA1NCAyNDguNTYzIDc3LjkyMTlDMjUyLjk5NCA4MS40NTEyIDI1Ni43NTUgODQuNDEyNyAyNjEuMzY1IDg2LjYxNjJDMjY1LjgyNSA4OC43NDc3IDI3MS4zMSA5MC4yNjA3IDI3OSA5MC4yNjA3VjEwNC41MTdDMjY5LjI1MSAxMDQuNTE3IDI2MS42NTcgMTAyLjU1NiAyNTUuMjE4IDk5LjQ3ODVDMjQ4LjkyOSA5Ni40NzI2IDI0My45NjkgOTIuNDg3NyAyMzkuNjgxIDg5LjA3MTNDMjM1LjI1IDg1LjU0MTkgMjMxLjQ4OSA4Mi41ODA1IDIyNi44NzkgODAuMzc3QzIyMi40MTkgNzguMjQ1NSAyMTYuOTM0IDc2LjczMjUgMjA5LjI0NCA3Ni43MzI0QzIwMS41NTQgNzYuNzMyNCAxOTYuMDY3IDc4LjI0NTEgMTkxLjYwNCA4MC4zNzdDMTg2Ljk5MiA4Mi41ODA4IDE4My4yMjkgODUuNTQzMiAxNzguNzk3IDg5LjA3MjNDMTc0LjUwNyA5Mi40ODgyIDE2OS41NDggOTYuNDcxOSAxNjMuMjYxIDk5LjQ3NzVDMTU2LjgyMyAxMDIuNTU1IDE0OS4yMzEgMTA0LjUxNyAxMzkuNDg3IDEwNC41MTdDMTI5Ljc0NCAxMDQuNTE3IDEyMi4xNTQgMTAyLjU1NiAxMTUuNzE4IDk5LjQ3NzVDMTA5LjQzMyA5Ni40NzE2IDEwNC40NzYgOTIuNDg3MiAxMDAuMTg5IDg5LjA3MTNDOTUuNzYwNyA4NS41NDIxIDkyLjAwMDMgODIuNTgwNCA4Ny4zOTA2IDgwLjM3N0M4Mi45MzE1IDc4LjI0NTUgNzcuNDQ1OCA3Ni43MzI0IDY5Ljc1NTkgNzYuNzMyNEM2Mi4wNjYxIDc2LjczMjUgNTYuNTc4MiA3OC4yNDUxIDUyLjExNjIgODAuMzc3QzQ3LjUwMzcgODIuNTgwOCA0My43NDAzIDg1LjU0MzIgMzkuMzA4NiA4OS4wNzIzQzM1LjAxODggOTIuNDg4MyAzMC4wNTk1IDk2LjQ3MiAyMy43NzI1IDk5LjQ3NzVDMTcuMzM0MyAxMDIuNTU1IDkuNzQzNzYgMTA0LjUxNyAwIDEwNC41MTdWOTAuMjYwN0M3LjY4MjkgOTAuMjYwNyAxMy4xNjUxIDg4Ljc0NzggMTcuNjI0IDg2LjYxNjJDMjIuMjM0IDg0LjQxMjQgMjUuOTk2IDgxLjQ1MDggMzAuNDI4NyA3Ny45MjA5QzM0LjcxOTQgNzQuNTA0MSAzOS42ODAyIDcwLjUyMDIgNDUuOTcwNyA2Ny41MTQ2QzUyLjQxMTggNjQuNDM3MiA2MC4wMDY5IDYyLjQ3NjYgNjkuNzU1OSA2Mi40NzY2Qzc5LjUwNDcgNjIuNDc2NiA4Ny4wOTg3IDY0LjQzNjggOTMuNTM4MSA2Ny41MTQ2Qzk5LjgyNjkgNzAuNTIwNyAxMDQuNzg2IDc0LjUwNTEgMTA5LjA3MyA3Ny45MjE5QzExMy41MDMgODEuNDUxOCAxMTcuMjYxIDg0LjQxMzggMTIxLjg2OCA4Ni42MTcyQzEyNi4zMjQgODguNzQ4MyAxMzEuODA1IDkwLjI2MDcgMTM5LjQ4NyA5MC4yNjA3QzE0Ny4xNyA5MC4yNjA3IDE1Mi42NTMgODguNzQ3OCAxNTcuMTEyIDg2LjYxNjJDMTYxLjcyMiA4NC40MTI0IDE2NS40ODQgODEuNDUwNiAxNjkuOTE2IDc3LjkyMDlDMTc0LjIwNyA3NC41MDQxIDE3OS4xNjggNzAuNTIwMyAxODUuNDU5IDY3LjUxNDZDMTkxLjkgNjQuNDM3MiAxOTkuNDk1IDYyLjQ3NjYgMjA5LjI0NCA2Mi40NzY2Wk0yMDkuMjQ0IDBDMjE4Ljk5MyAzLjg3MjE2ZS0wNSAyMjYuNTg3IDEuOTYwMjEgMjMzLjAyNiA1LjAzODA5QzIzOS4zMTUgOC4wNDM5NiAyNDQuMjc1IDEyLjAyNzkgMjQ4LjU2MyAxNS40NDQzQzI1Mi45OTQgMTguOTczOCAyNTYuNzU1IDIxLjkzNjEgMjYxLjM2NSAyNC4xMzk2QzI2NS44MjUgMjYuMjcxMSAyNzEuMzEgMjcuNzg0MiAyNzkgMjcuNzg0MlY0Mi4wMzkxQzI2OS4yNTEgNDIuMDM5MSAyNjEuNjU4IDQwLjA3ODkgMjU1LjIxOCAzNy4wMDFDMjQ4LjkyOSAzMy45OTUxIDI0My45NjkgMzAuMDExMiAyMzkuNjgxIDI2LjU5NDdDMjM1LjI1IDIzLjA2NTMgMjMxLjQ4OSAyMC4xMDM5IDIyNi44NzkgMTcuOTAwNEMyMjIuNDE5IDE1Ljc2ODkgMjE2LjkzNCAxNC4yNTU5IDIwOS4yNDQgMTQuMjU1OUMyMDEuNTU0IDE0LjI1NTkgMTk2LjA2NyAxNS43Njg1IDE5MS42MDQgMTcuOTAwNEMxODYuOTkyIDIwLjEwNDIgMTgzLjIyOSAyMy4wNjY2IDE3OC43OTcgMjYuNTk1N0MxNzQuNTA3IDMwLjAxMTcgMTY5LjU0OCAzMy45OTU0IDE2My4yNjEgMzcuMDAxQzE1Ni44MjMgNDAuMDc4OCAxNDkuMjMxIDQyLjAzOTEgMTM5LjQ4NyA0Mi4wMzkxQzEyOS43NDQgNDIuMDM5IDEyMi4xNTQgNDAuMDc5MiAxMTUuNzE4IDM3LjAwMUMxMDkuNDMyIDMzLjk5NDkgMTA0LjQ3NiAzMC4wMDk3IDEwMC4xODkgMjYuNTkzOEM5NS43NjA3IDIzLjA2NDYgOTIuMDAwMyAyMC4xMDM4IDg3LjM5MDYgMTcuOTAwNEM4Mi45MzE1IDE1Ljc2OSA3Ny40NDU4IDE0LjI1NTkgNjkuNzU1OSAxNC4yNTU5QzYyLjA2NjEgMTQuMjU1OSA1Ni41NzgyIDE1Ljc2ODUgNTIuMTE2MiAxNy45MDA0QzQ3LjUwMzggMjAuMTA0MiA0My43NDAzIDIzLjA2NjcgMzkuMzA4NiAyNi41OTU3QzM1LjAxODkgMzAuMDExNyAzMC4wNTk0IDMzLjk5NTQgMjMuNzcyNSAzNy4wMDFDMTcuMzM0MyA0MC4wNzg4IDkuNzQzNzMgNDIuMDM5MSAwIDQyLjAzOTFWMjcuNzg0MkM3LjY4Mjg2IDI3Ljc4NDIgMTMuMTY1MSAyNi4yNzEyIDE3LjYyNCAyNC4xMzk2QzIyLjIzMzkgMjEuOTM1OCAyNS45OTYgMTguOTc0MiAzMC40Mjg3IDE1LjQ0NDNDMzQuNzE5NCAxMi4wMjc2IDM5LjY4MDIgOC4wNDM2NyA0NS45NzA3IDUuMDM4MDlDNTIuNDExOCAxLjk2MDU5IDYwLjAwNjkgMy44NTE5MmUtMDUgNjkuNzU1OSAwQzc5LjUwNDcgMi4zODQxM2UtMDYgODcuMDk4NyAxLjk2MDE4IDkzLjUzODEgNS4wMzgwOUM5OS44MjcgOC4wNDQxMyAxMDQuNzg2IDEyLjAyODUgMTA5LjA3MyAxNS40NDUzQzExMy41MDMgMTguOTc1MyAxMTcuMjYxIDIxLjkzNzIgMTIxLjg2OCAyNC4xNDA2QzEyNi4zMjQgMjYuMjcxNyAxMzEuODA1IDI3Ljc4NDEgMTM5LjQ4NyAyNy43ODQyQzE0Ny4xNyAyNy43ODQyIDE1Mi42NTMgMjYuMjcxMyAxNTcuMTEyIDI0LjEzOTZDMTYxLjcyMiAyMS45MzU5IDE2NS40ODQgMTguOTc0IDE2OS45MTYgMTUuNDQ0M0MxNzQuMjA3IDEyLjAyNzUgMTc5LjE2OCA4LjA0MzY5IDE4NS40NTkgNS4wMzgwOUMxOTEuOSAxLjk2MDU4IDE5OS40OTUgLTIuMzg0MTdlLTA2IDIwOS4yNDQgMFoiIGZpbGw9IiMwNzFCMkIiPjwvcGF0aD4KPC9zdmc+") center/contain no-repeat;
+    animation: slotWave 2.1s ease-in-out infinite; }
+  .shot-skin::after { content: ""; position: absolute; inset: 0;
+    background: linear-gradient(100deg,transparent 20%,rgba(253,249,245,.65) 50%,transparent 80%);
+    transform: translateX(-100%); animation: slotSweep 1.9s ease-in-out infinite; }
+  @keyframes slotWave { 0%,100% { opacity: .22; transform: translateY(1px); } 50% { opacity: .42; transform: translateY(-1px); } }
+  @keyframes slotSweep { 0% { transform: translateX(-100%); } 60%,100% { transform: translateX(100%); } }
+  @media (prefers-reduced-motion: reduce) { .shot-mark, .shot-skin::after { animation: none; } .shot-skin::after { opacity: 0; } }
+  /* Welcome screen: covers the page while fonts and the hero image settle,
+     then lifts away. Painted from CSS so it is up on the very first frame. */
+  /* While booting, every entrance animation on the page is frozen at frame 0
+     so nothing is caught mid-load behind the welcome screen. */
+  body[data-booting] #dc-root *:not(#welcome):not(#welcome *) { animation-play-state: paused !important; }
+  body[data-booting] #dc-root .shot-img { transition: none !important; }
+  #welcome { position: fixed; inset: 0; z-index: 900; display: grid; place-items: center;
+    background: #071B2B; overflow: hidden; }
+  /* Slow crest of light travelling across the fill, echoing the wave mark. */
+  #welcome::before { content: ""; position: absolute; inset: -20%; will-change: opacity;
+    background: radial-gradient(58% 40% at 50% 50%, rgba(143,181,181,.20), transparent 70%);
+    animation: bootCrest 3.6s ease-in-out infinite; }
+  #welcome > i { display: block; width: min(38vw, 260px); min-width: 132px; aspect-ratio: 279/105;
+    background: #FDF9F5; will-change: transform, opacity; backface-visibility: hidden;
+    animation: bootMark .78s cubic-bezier(.16,.84,.24,1) .12s both;
+    -webkit-mask: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjc5IiBoZWlnaHQ9IjEwNSIgdmlld0JveD0iMCAwIDI3OSAxMDUiIGZpbGw9IiMwMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0yMDkuMjQ0IDYyLjQ3NjZDMjE4Ljk5MyA2Mi40NzY2IDIyNi41ODcgNjQuNDM2OCAyMzMuMDI2IDY3LjUxNDZDMjM5LjMxNSA3MC41MjA1IDI0NC4yNzUgNzQuNTA1NCAyNDguNTYzIDc3LjkyMTlDMjUyLjk5NCA4MS40NTEyIDI1Ni43NTUgODQuNDEyNyAyNjEuMzY1IDg2LjYxNjJDMjY1LjgyNSA4OC43NDc3IDI3MS4zMSA5MC4yNjA3IDI3OSA5MC4yNjA3VjEwNC41MTdDMjY5LjI1MSAxMDQuNTE3IDI2MS42NTcgMTAyLjU1NiAyNTUuMjE4IDk5LjQ3ODVDMjQ4LjkyOSA5Ni40NzI2IDI0My45NjkgOTIuNDg3NyAyMzkuNjgxIDg5LjA3MTNDMjM1LjI1IDg1LjU0MTkgMjMxLjQ4OSA4Mi41ODA1IDIyNi44NzkgODAuMzc3QzIyMi40MTkgNzguMjQ1NSAyMTYuOTM0IDc2LjczMjUgMjA5LjI0NCA3Ni43MzI0QzIwMS41NTQgNzYuNzMyNCAxOTYuMDY3IDc4LjI0NTEgMTkxLjYwNCA4MC4zNzdDMTg2Ljk5MiA4Mi41ODA4IDE4My4yMjkgODUuNTQzMiAxNzguNzk3IDg5LjA3MjNDMTc0LjUwNyA5Mi40ODgyIDE2OS41NDggOTYuNDcxOSAxNjMuMjYxIDk5LjQ3NzVDMTU2LjgyMyAxMDIuNTU1IDE0OS4yMzEgMTA0LjUxNyAxMzkuNDg3IDEwNC41MTdDMTI5Ljc0NCAxMDQuNTE3IDEyMi4xNTQgMTAyLjU1NiAxMTUuNzE4IDk5LjQ3NzVDMTA5LjQzMyA5Ni40NzE2IDEwNC40NzYgOTIuNDg3MiAxMDAuMTg5IDg5LjA3MTNDOTUuNzYwNyA4NS41NDIxIDkyLjAwMDMgODIuNTgwNCA4Ny4zOTA2IDgwLjM3N0M4Mi45MzE1IDc4LjI0NTUgNzcuNDQ1OCA3Ni43MzI0IDY5Ljc1NTkgNzYuNzMyNEM2Mi4wNjYxIDc2LjczMjUgNTYuNTc4MiA3OC4yNDUxIDUyLjExNjIgODAuMzc3QzQ3LjUwMzcgODIuNTgwOCA0My43NDAzIDg1LjU0MzIgMzkuMzA4NiA4OS4wNzIzQzM1LjAxODggOTIuNDg4MyAzMC4wNTk1IDk2LjQ3MiAyMy43NzI1IDk5LjQ3NzVDMTcuMzM0MyAxMDIuNTU1IDkuNzQzNzYgMTA0LjUxNyAwIDEwNC41MTdWOTAuMjYwN0M3LjY4MjkgOTAuMjYwNyAxMy4xNjUxIDg4Ljc0NzggMTcuNjI0IDg2LjYxNjJDMjIuMjM0IDg0LjQxMjQgMjUuOTk2IDgxLjQ1MDggMzAuNDI4NyA3Ny45MjA5QzM0LjcxOTQgNzQuNTA0MSAzOS42ODAyIDcwLjUyMDIgNDUuOTcwNyA2Ny41MTQ2QzUyLjQxMTggNjQuNDM3MiA2MC4wMDY5IDYyLjQ3NjYgNjkuNzU1OSA2Mi40NzY2Qzc5LjUwNDcgNjIuNDc2NiA4Ny4wOTg3IDY0LjQzNjggOTMuNTM4MSA2Ny41MTQ2Qzk5LjgyNjkgNzAuNTIwNyAxMDQuNzg2IDc0LjUwNTEgMTA5LjA3MyA3Ny45MjE5QzExMy41MDMgODEuNDUxOCAxMTcuMjYxIDg0LjQxMzggMTIxLjg2OCA4Ni42MTcyQzEyNi4zMjQgODguNzQ4MyAxMzEuODA1IDkwLjI2MDcgMTM5LjQ4NyA5MC4yNjA3QzE0Ny4xNyA5MC4yNjA3IDE1Mi42NTMgODguNzQ3OCAxNTcuMTEyIDg2LjYxNjJDMTYxLjcyMiA4NC40MTI0IDE2NS40ODQgODEuNDUwNiAxNjkuOTE2IDc3LjkyMDlDMTc0LjIwNyA3NC41MDQxIDE3OS4xNjggNzAuNTIwMyAxODUuNDU5IDY3LjUxNDZDMTkxLjkgNjQuNDM3MiAxOTkuNDk1IDYyLjQ3NjYgMjA5LjI0NCA2Mi40NzY2Wk0yMDkuMjQ0IDBDMjE4Ljk5MyAzLjg3MjE2ZS0wNSAyMjYuNTg3IDEuOTYwMjEgMjMzLjAyNiA1LjAzODA5QzIzOS4zMTUgOC4wNDM5NiAyNDQuMjc1IDEyLjAyNzkgMjQ4LjU2MyAxNS40NDQzQzI1Mi45OTQgMTguOTczOCAyNTYuNzU1IDIxLjkzNjEgMjYxLjM2NSAyNC4xMzk2QzI2NS44MjUgMjYuMjcxMSAyNzEuMzEgMjcuNzg0MiAyNzkgMjcuNzg0MlY0Mi4wMzkxQzI2OS4yNTEgNDIuMDM5MSAyNjEuNjU4IDQwLjA3ODkgMjU1LjIxOCAzNy4wMDFDMjQ4LjkyOSAzMy45OTUxIDI0My45NjkgMzAuMDExMiAyMzkuNjgxIDI2LjU5NDdDMjM1LjI1IDIzLjA2NTMgMjMxLjQ4OSAyMC4xMDM5IDIyNi44NzkgMTcuOTAwNEMyMjIuNDE5IDE1Ljc2ODkgMjE2LjkzNCAxNC4yNTU5IDIwOS4yNDQgMTQuMjU1OUMyMDEuNTU0IDE0LjI1NTkgMTk2LjA2NyAxNS43Njg1IDE5MS42MDQgMTcuOTAwNEMxODYuOTkyIDIwLjEwNDIgMTgzLjIyOSAyMy4wNjY2IDE3OC43OTcgMjYuNTk1N0MxNzQuNTA3IDMwLjAxMTcgMTY5LjU0OCAzMy45OTU0IDE2My4yNjEgMzcuMDAxQzE1Ni44MjMgNDAuMDc4OCAxNDkuMjMxIDQyLjAzOTEgMTM5LjQ4NyA0Mi4wMzkxQzEyOS43NDQgNDIuMDM5IDEyMi4xNTQgNDAuMDc5MiAxMTUuNzE4IDM3LjAwMUMxMDkuNDMyIDMzLjk5NDkgMTA0LjQ3NiAzMC4wMDk3IDEwMC4xODkgMjYuNTkzOEM5NS43NjA3IDIzLjA2NDYgOTIuMDAwMyAyMC4xMDM4IDg3LjM5MDYgMTcuOTAwNEM4Mi45MzE1IDE1Ljc2OSA3Ny40NDU4IDE0LjI1NTkgNjkuNzU1OSAxNC4yNTU5QzYyLjA2NjEgMTQuMjU1OSA1Ni41NzgyIDE1Ljc2ODUgNTIuMTE2MiAxNy45MDA0QzQ3LjUwMzggMjAuMTA0MiA0My43NDAzIDIzLjA2NjcgMzkuMzA4NiAyNi41OTU3QzM1LjAxODkgMzAuMDExNyAzMC4wNTk0IDMzLjk5NTQgMjMuNzcyNSAzNy4wMDFDMTcuMzM0MyA0MC4wNzg4IDkuNzQzNzMgNDIuMDM5MSAwIDQyLjAzOTFWMjcuNzg0MkM3LjY4Mjg2IDI3Ljc4NDIgMTMuMTY1MSAyNi4yNzEyIDE3LjYyNCAyNC4xMzk2QzIyLjIzMzkgMjEuOTM1OCAyNS45OTYgMTguOTc0MiAzMC40Mjg3IDE1LjQ0NDNDMzQuNzE5NCAxMi4wMjc2IDM5LjY4MDIgOC4wNDM2NyA0NS45NzA3IDUuMDM4MDlDNTIuNDExOCAxLjk2MDU5IDYwLjAwNjkgMy44NTE5MmUtMDUgNjkuNzU1OSAwQzc5LjUwNDcgMi4zODQxM2UtMDYgODcuMDk4NyAxLjk2MDE4IDkzLjUzODEgNS4wMzgwOUM5OS44MjcgOC4wNDQxMyAxMDQuNzg2IDEyLjAyODUgMTA5LjA3MyAxNS40NDUzQzExMy41MDMgMTguOTc1MyAxMTcuMjYxIDIxLjkzNzIgMTIxLjg2OCAyNC4xNDA2QzEyNi4zMjQgMjYuMjcxNyAxMzEuODA1IDI3Ljc4NDEgMTM5LjQ4NyAyNy43ODQyQzE0Ny4xNyAyNy43ODQyIDE1Mi42NTMgMjYuMjcxMyAxNTcuMTEyIDI0LjEzOTZDMTYxLjcyMiAyMS45MzU5IDE2NS40ODQgMTguOTc0IDE2OS45MTYgMTUuNDQ0M0MxNzQuMjA3IDEyLjAyNzUgMTc5LjE2OCA4LjA0MzY5IDE4NS40NTkgNS4wMzgwOUMxOTEuOSAxLjk2MDU4IDE5OS40OTUgLTIuMzg0MTdlLTA2IDIwOS4yNDQgMFoiIGZpbGw9IiMwNzFCMkIiPjwvcGF0aD4KPC9zdmc+") center/contain no-repeat;
+    mask: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjc5IiBoZWlnaHQ9IjEwNSIgdmlld0JveD0iMCAwIDI3OSAxMDUiIGZpbGw9IiMwMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0yMDkuMjQ0IDYyLjQ3NjZDMjE4Ljk5MyA2Mi40NzY2IDIyNi41ODcgNjQuNDM2OCAyMzMuMDI2IDY3LjUxNDZDMjM5LjMxNSA3MC41MjA1IDI0NC4yNzUgNzQuNTA1NCAyNDguNTYzIDc3LjkyMTlDMjUyLjk5NCA4MS40NTEyIDI1Ni43NTUgODQuNDEyNyAyNjEuMzY1IDg2LjYxNjJDMjY1LjgyNSA4OC43NDc3IDI3MS4zMSA5MC4yNjA3IDI3OSA5MC4yNjA3VjEwNC41MTdDMjY5LjI1MSAxMDQuNTE3IDI2MS42NTcgMTAyLjU1NiAyNTUuMjE4IDk5LjQ3ODVDMjQ4LjkyOSA5Ni40NzI2IDI0My45NjkgOTIuNDg3NyAyMzkuNjgxIDg5LjA3MTNDMjM1LjI1IDg1LjU0MTkgMjMxLjQ4OSA4Mi41ODA1IDIyNi44NzkgODAuMzc3QzIyMi40MTkgNzguMjQ1NSAyMTYuOTM0IDc2LjczMjUgMjA5LjI0NCA3Ni43MzI0QzIwMS41NTQgNzYuNzMyNCAxOTYuMDY3IDc4LjI0NTEgMTkxLjYwNCA4MC4zNzdDMTg2Ljk5MiA4Mi41ODA4IDE4My4yMjkgODUuNTQzMiAxNzguNzk3IDg5LjA3MjNDMTc0LjUwNyA5Mi40ODgyIDE2OS41NDggOTYuNDcxOSAxNjMuMjYxIDk5LjQ3NzVDMTU2LjgyMyAxMDIuNTU1IDE0OS4yMzEgMTA0LjUxNyAxMzkuNDg3IDEwNC41MTdDMTI5Ljc0NCAxMDQuNTE3IDEyMi4xNTQgMTAyLjU1NiAxMTUuNzE4IDk5LjQ3NzVDMTA5LjQzMyA5Ni40NzE2IDEwNC40NzYgOTIuNDg3MiAxMDAuMTg5IDg5LjA3MTNDOTUuNzYwNyA4NS41NDIxIDkyLjAwMDMgODIuNTgwNCA4Ny4zOTA2IDgwLjM3N0M4Mi45MzE1IDc4LjI0NTUgNzcuNDQ1OCA3Ni43MzI0IDY5Ljc1NTkgNzYuNzMyNEM2Mi4wNjYxIDc2LjczMjUgNTYuNTc4MiA3OC4yNDUxIDUyLjExNjIgODAuMzc3QzQ3LjUwMzcgODIuNTgwOCA0My43NDAzIDg1LjU0MzIgMzkuMzA4NiA4OS4wNzIzQzM1LjAxODggOTIuNDg4MyAzMC4wNTk1IDk2LjQ3MiAyMy43NzI1IDk5LjQ3NzVDMTcuMzM0MyAxMDIuNTU1IDkuNzQzNzYgMTA0LjUxNyAwIDEwNC41MTdWOTAuMjYwN0M3LjY4MjkgOTAuMjYwNyAxMy4xNjUxIDg4Ljc0NzggMTcuNjI0IDg2LjYxNjJDMjIuMjM0IDg0LjQxMjQgMjUuOTk2IDgxLjQ1MDggMzAuNDI4NyA3Ny45MjA5QzM0LjcxOTQgNzQuNTA0MSAzOS42ODAyIDcwLjUyMDIgNDUuOTcwNyA2Ny41MTQ2QzUyLjQxMTggNjQuNDM3MiA2MC4wMDY5IDYyLjQ3NjYgNjkuNzU1OSA2Mi40NzY2Qzc5LjUwNDcgNjIuNDc2NiA4Ny4wOTg3IDY0LjQzNjggOTMuNTM4MSA2Ny41MTQ2Qzk5LjgyNjkgNzAuNTIwNyAxMDQuNzg2IDc0LjUwNTEgMTA5LjA3MyA3Ny45MjE5QzExMy41MDMgODEuNDUxOCAxMTcuMjYxIDg0LjQxMzggMTIxLjg2OCA4Ni42MTcyQzEyNi4zMjQgODguNzQ4MyAxMzEuODA1IDkwLjI2MDcgMTM5LjQ4NyA5MC4yNjA3QzE0Ny4xNyA5MC4yNjA3IDE1Mi42NTMgODguNzQ3OCAxNTcuMTEyIDg2LjYxNjJDMTYxLjcyMiA4NC40MTI0IDE2NS40ODQgODEuNDUwNiAxNjkuOTE2IDc3LjkyMDlDMTc0LjIwNyA3NC41MDQxIDE3OS4xNjggNzAuNTIwMyAxODUuNDU5IDY3LjUxNDZDMTkxLjkgNjQuNDM3MiAxOTkuNDk1IDYyLjQ3NjYgMjA5LjI0NCA2Mi40NzY2Wk0yMDkuMjQ0IDBDMjE4Ljk5MyAzLjg3MjE2ZS0wNSAyMjYuNTg3IDEuOTYwMjEgMjMzLjAyNiA1LjAzODA5QzIzOS4zMTUgOC4wNDM5NiAyNDQuMjc1IDEyLjAyNzkgMjQ4LjU2MyAxNS40NDQzQzI1Mi45OTQgMTguOTczOCAyNTYuNzU1IDIxLjkzNjEgMjYxLjM2NSAyNC4xMzk2QzI2NS44MjUgMjYuMjcxMSAyNzEuMzEgMjcuNzg0MiAyNzkgMjcuNzg0MlY0Mi4wMzkxQzI2OS4yNTEgNDIuMDM5MSAyNjEuNjU4IDQwLjA3ODkgMjU1LjIxOCAzNy4wMDFDMjQ4LjkyOSAzMy45OTUxIDI0My45NjkgMzAuMDExMiAyMzkuNjgxIDI2LjU5NDdDMjM1LjI1IDIzLjA2NTMgMjMxLjQ4OSAyMC4xMDM5IDIyNi44NzkgMTcuOTAwNEMyMjIuNDE5IDE1Ljc2ODkgMjE2LjkzNCAxNC4yNTU5IDIwOS4yNDQgMTQuMjU1OUMyMDEuNTU0IDE0LjI1NTkgMTk2LjA2NyAxNS43Njg1IDE5MS42MDQgMTcuOTAwNEMxODYuOTkyIDIwLjEwNDIgMTgzLjIyOSAyMy4wNjY2IDE3OC43OTcgMjYuNTk1N0MxNzQuNTA3IDMwLjAxMTcgMTY5LjU0OCAzMy45OTU0IDE2My4yNjEgMzcuMDAxQzE1Ni44MjMgNDAuMDc4OCAxNDkuMjMxIDQyLjAzOTEgMTM5LjQ4NyA0Mi4wMzkxQzEyOS43NDQgNDIuMDM5IDEyMi4xNTQgNDAuMDc5MiAxMTUuNzE4IDM3LjAwMUMxMDkuNDMyIDMzLjk5NDkgMTA0LjQ3NiAzMC4wMDk3IDEwMC4xODkgMjYuNTkzOEM5NS43NjA3IDIzLjA2NDYgOTIuMDAwMyAyMC4xMDM4IDg3LjM5MDYgMTcuOTAwNEM4Mi45MzE1IDE1Ljc2OSA3Ny40NDU4IDE0LjI1NTkgNjkuNzU1OSAxNC4yNTU5QzYyLjA2NjEgMTQuMjU1OSA1Ni41NzgyIDE1Ljc2ODUgNTIuMTE2MiAxNy45MDA0QzQ3LjUwMzggMjAuMTA0MiA0My43NDAzIDIzLjA2NjcgMzkuMzA4NiAyNi41OTU3QzM1LjAxODkgMzAuMDExNyAzMC4wNTk0IDMzLjk5NTQgMjMuNzcyNSAzNy4wMDFDMTcuMzM0MyA0MC4wNzg4IDkuNzQzNzMgNDIuMDM5MSAwIDQyLjAzOTFWMjcuNzg0MkM3LjY4Mjg2IDI3Ljc4NDIgMTMuMTY1MSAyNi4yNzEyIDE3LjYyNCAyNC4xMzk2QzIyLjIzMzkgMjEuOTM1OCAyNS45OTYgMTguOTc0MiAzMC40Mjg3IDE1LjQ0NDNDMzQuNzE5NCAxMi4wMjc2IDM5LjY4MDIgOC4wNDM2NyA0NS45NzA3IDUuMDM4MDlDNTIuNDExOCAxLjk2MDU5IDYwLjAwNjkgMy44NTE5MmUtMDUgNjkuNzU1OSAwQzc5LjUwNDcgMi4zODQxM2UtMDYgODcuMDk4NyAxLjk2MDE4IDkzLjUzODEgNS4wMzgwOUM5OS44MjcgOC4wNDQxMyAxMDQuNzg2IDEyLjAyODUgMTA5LjA3MyAxNS40NDUzQzExMy41MDMgMTguOTc1MyAxMTcuMjYxIDIxLjkzNzIgMTIxLjg2OCAyNC4xNDA2QzEyNi4zMjQgMjYuMjcxNyAxMzEuODA1IDI3Ljc4NDEgMTM5LjQ4NyAyNy43ODQyQzE0Ny4xNyAyNy43ODQyIDE1Mi42NTMgMjYuMjcxMyAxNTcuMTEyIDI0LjEzOTZDMTYxLjcyMiAyMS45MzU5IDE2NS40ODQgMTguOTc0IDE2OS45MTYgMTUuNDQ0M0MxNzQuMjA3IDEyLjAyNzUgMTc5LjE2OCA4LjA0MzY5IDE4NS40NTkgNS4wMzgwOUMxOTEuOSAxLjk2MDU4IDE5OS40OTUgLTIuMzg0MTdlLTA2IDIwOS4yNDQgMFoiIGZpbGw9IiMwNzFCMkIiPjwvcGF0aD4KPC9zdmc+") center/contain no-repeat; }
+  #welcome[data-done] { animation: bootOut .58s cubic-bezier(.6,0,.22,1) both; }
+  #welcome[data-done] > i { animation: bootMarkOut .32s cubic-bezier(.5,0,.8,.15) both; }
+  #welcome[data-done]::before { animation: none; opacity: 0; transition: opacity .4s ease; }
+  @keyframes bootMark { from { opacity: 0; transform: translate3d(0,14px,0) scale(.965); }
+    to { opacity: 1; transform: translate3d(0,0,0) scale(1); } }
+  @keyframes bootMarkOut { to { opacity: 0; transform: translate3d(0,-14px,0) scale(1.035); } }
+  @keyframes bootCrest { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
+  @keyframes bootOut { to { opacity: 0; transform: translate3d(0,-3%,0); visibility: hidden; } }
+  @media (prefers-reduced-motion: reduce) {
+    #welcome > i, #welcome, #welcome[data-done], #welcome[data-done] > i,
+    #welcome::before { animation-duration: .01s; animation-iteration-count: 1; }
+  }
+  @keyframes rise { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
+  @keyframes riseSm { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes wipe { from { opacity: 0; clip-path: inset(0 0 100% 0); } to { opacity: 1; clip-path: inset(0 0 0 0); } }
+  @keyframes drift { from { opacity: 0; transform: translateY(40px) scale(1.04); } to { opacity: 1; transform: none; } }
+  @keyframes lineGrow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @keyframes parallax { from { transform: translateY(-26%); } to { transform: translateY(26%); } }
+  @keyframes waveDrift { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes waveDriftBack { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+  @keyframes heroPar { from { transform: translateY(0); } to { transform: translateY(14%); } }
+  @keyframes heroIn { from { opacity: 0; transform: scale(1.14); } to { opacity: 1; transform: none; } }
+  @keyframes heroZoom { from { transform: scale(1.16); } to { transform: scale(1); } }
+  @keyframes heroWord { from { opacity: 0; transform: translateY(0.9em); } to { opacity: 1; transform: none; } }
+  @keyframes panelInA { from { opacity: 0; transform: translateY(30px) scale(.992); } 45% { opacity: .55; } to { opacity: 1; transform: none; } }
+  @keyframes panelInB { from { opacity: 0; transform: translateY(30px) scale(.992); } 45% { opacity: .55; } to { opacity: 1; transform: none; } }
+  @keyframes glideX { from { opacity: 0; transform: translateX(-40px); } to { opacity: 1; transform: none; } }
+</style>
+<script>
+(function () {
+  // The boot cover lives OUTSIDE the component tree: it is created here and
+  // owned by this script, so no re-render can bring it back once dismissed.
+  var MIN = 820, MAX = 3000, t0 = Date.now(), lifted = false;
+  var el = document.createElement('div');
+  el.id = 'welcome';
+  el.appendChild(document.createElement('i'));
+
+  function mount() {
+    if (!document.body) return setTimeout(mount, 8);
+    // Hot-reload can run this script again; each run owns only its own closure,
+    // so any earlier cover must go or it stays on screen forever.
+    var stale = document.querySelectorAll('#welcome');
+    for (var i = 0; i < stale.length; i++) stale[i].parentNode.removeChild(stale[i]);
+    // Already booted once this session — don't cover the page again.
+    if (document.body.hasAttribute('data-booted')) { lifted = true; return; }
+    document.body.setAttribute('data-booting', '');
+    document.body.appendChild(el);
+  }
+
+  function finish() {
+    if (el.hasAttribute('data-done')) return;
+    el.setAttribute('data-done', '');
+    setTimeout(function () { if (el.parentNode) el.parentNode.removeChild(el); }, 900);
+  }
+
+  function lift() {
+    if (lifted) return;
+    lifted = true;
+    setTimeout(function () {
+      document.body.removeAttribute('data-booting');
+      document.body.setAttribute('data-booted', '');
+      // A frame's grace lets the foam ground land before the cover moves, but
+      // rAF never fires in a hidden tab — so a timer guarantees dismissal.
+      requestAnimationFrame(finish);
+      setTimeout(finish, 60);
+    }, Math.max(0, MIN - (Date.now() - t0)));
+  }
+
+  mount();
+
+  function whenPainted() {
+    // Above-the-fold images must be DECODED, not merely fetched, so the page
+    // is revealed complete rather than mid-load.
+    var imgs = [].slice.call(document.querySelectorAll('img'))
+      .filter(function (im) { return !im.classList.contains('shot-img'); })
+      .slice(0, 8);
+    var jobs = imgs.map(function (im) {
+      var done = (im.complete && im.naturalWidth)
+        ? Promise.resolve()
+        : new Promise(function (res) {
+            im.addEventListener('load', res, { once: true });
+            im.addEventListener('error', res, { once: true });
+          });
+      return done.then(function () { return im.decode ? im.decode().catch(function () {}) : null; });
+    });
+    if (document.fonts) jobs.push(document.fonts.ready.catch(function () {}));
+    Promise.all(jobs).then(lift);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', whenPainted, { once: true });
+  } else {
+    whenPainted();
+  }
+  setTimeout(lift, MAX);
+})();
+</script>
+</helmet>
+
+<div style="background:#FDF9F5;color:#071B2B;font-family:'Funnel Sans',sans-serif;overflow-x:hidden">
+
+  <header style="{{ headerStyle }}">
+    <a href="#top" style="display:flex;align-items:center;flex:0 0 auto"><img src="assets/logo-blue.svg" alt="DUO MARINE" style="{{ lockupStyle }}"><img src="assets/logo-wordmark.svg" alt="DUO MARINE" style="{{ wordmarkStyle }}"></a>
+    <div style="{{ navWrapStyle }}">
+    <nav style="display:flex;align-items:center;flex-wrap:wrap;justify-content:center;min-width:0;gap:clamp(8px,2.4vw,38px);font:400 clamp(9px,1.5vw,11px)/1 Barlow,sans-serif;letter-spacing:clamp(.08em,0.4vw,.2em);text-transform:uppercase">
+      <a href="#vessels" style="color:#071B2B;transition:color .3s ease" style-hover="color:#F47F4B">RIBs</a>
+      <a href="#care" style="color:#071B2B;transition:color .3s ease" style-hover="color:#F47F4B">Care</a>
+      <a href="#faq" style="color:#071B2B;transition:color .3s ease" style-hover="color:#F47F4B">Questions</a>
+    </nav>
+    </div>
+    <button type="button" onClick="{{ toggleMenu }}" aria-label="Menu" style="{{ burgerStyle }}"><img src="assets/logo-wave-icon.svg" alt="" style="{{ burgerIconStyle }}"></button>
+    <div style="{{ ctaWrapStyle }}">
+      <a href="#enquiry-form" style="flex:0 0 auto;display:inline-flex;align-items:center;gap:10px;padding:clamp(9px,1.4vw,11px) clamp(12px,2.4vw,20px);border:1px solid #071B2B;border-radius:999px;font:400 clamp(9px,1.5vw,11px)/1 Barlow,sans-serif;letter-spacing:clamp(.08em,0.4vw,.2em);text-transform:uppercase;color:#071B2B;transition:background .35s ease,color .35s ease" style-hover="background:#F47F4B;border-color:#F47F4B;color:#FDF9F5">Enquire</a>
+    </div>
+    <div style="{{ menuStyle }}">
+      <a href="#vessels" onClick="{{ closeMenu }}" style="display:block;padding:18px 0;border-bottom:1px solid rgba(7,27,43,.10);font:400 13px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#071B2B" style-hover="color:#F47F4B">RIBs</a>
+      <a href="#care" onClick="{{ closeMenu }}" style="display:block;padding:18px 0;border-bottom:1px solid rgba(7,27,43,.10);font:400 13px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#071B2B" style-hover="color:#F47F4B">Care</a>
+      <a href="#faq" onClick="{{ closeMenu }}" style="display:block;padding:18px 0;border-bottom:1px solid rgba(7,27,43,.10);font:400 13px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#071B2B" style-hover="color:#F47F4B">Questions</a>
+      <a href="#contact" onClick="{{ closeMenu }}" style="display:block;margin-top:20px;padding:16px 0;text-align:center;border-radius:999px;background:#071B2B;color:#FDF9F5;font:400 12px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase" style-hover="background:#F47F4B">Enquire</a>
+    </div>
+  </header>
+
+  <section id="top" data-screen-label="Hero" style="position:relative;height:100svh;min-height:100svh;width:100%;overflow:hidden;background:#071B2B">
+    <div style="position:absolute;inset:0;overflow:hidden">
+      <div data-parallax="0.14" style="position:absolute;left:0;right:0;top:-14%;height:128%;animation:heroPar 1s linear both;animation-timeline:scroll(root);animation-range:0 110vh">
+        <div style="position:absolute;inset:0;background:#071B2B;animation:heroIn 2.2s cubic-bezier(.16,.84,.24,1) both"><picture style="display: block; width: 100%; height: 100%; position: relative"><source media="(max-width: 899px)" srcset="assets/hero-mobile-v3-720.webp 720w, assets/hero-mobile-v3.webp 1080w" sizes="100vw" type="image/webp"><img src="assets/hero-27gt-malta.webp" fetchpriority="high" decoding="sync" alt="A DUO MARINE RIB under way off the Maltese coast" style="{{ heroImgStyle }}"><div style="position: absolute; inset: 0; background: linear-gradient(180deg,rgba(7,27,43,0.46) 0%,rgba(7,27,43,0.12) 26%,rgba(7,27,43,0.52) 55%,rgba(7,27,43,0.82) 78%,rgba(7,27,43,0.94) 100%); pointer-events: none"></div></picture></div>
+      </div>
+    </div>
+    
+    <div style="position:absolute;left:clamp(20px,3.2vw,52px);right:clamp(20px,3.2vw,52px);bottom:clamp(40px,6vw,84px);display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:40px;pointer-events:none">
+      <div style="max-width:920px">
+        <div style="overflow:hidden;margin-bottom:22px"></div>
+        <h1 style="margin:0;font:300 clamp(46px,11.5vw,116px)/0.95 Barlow,sans-serif;letter-spacing:.02em;text-transform:uppercase;color:#FDF9F5">
+          <span style="display:block;overflow:hidden"><span style="display:block;animation:heroWord 1.15s cubic-bezier(.2,.8,.2,1) .45s both">Performance</span></span>
+          <span style="display:block;overflow:hidden"><span style="display:block;animation:heroWord 1.15s cubic-bezier(.2,.8,.2,1) .6s both">and comfort</span></span>
+          <span style="display:block;overflow:hidden"><span style="display:block;animation:heroWord 1.15s cubic-bezier(.2,.8,.2,1) .75s both;color:#8FB5B5">at sea</span></span>
+        </h1>
+      </div>
+      <div style="max-width:340px;animation:fade 1.4s ease 1.1s both;pointer-events:auto">
+        
+        <a href="#vessels" style="display:inline-flex;align-items:center;gap:14px;font:400 11px/1 Barlow,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#FDF9F5;padding-bottom:8px;border-bottom:1px solid rgba(253,249,245,.4)" style-hover="color:#F47F4B">See the fleet &nbsp;↓</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="vessels" data-screen-label="Vessels" style="padding:clamp(72px,9vw,140px) clamp(20px,3.2vw,52px) clamp(60px,7vw,110px);background:#FDF9F5">
+    <div style="max-width:1520px;margin:0 auto">
+      <div style="display:flex;flex-direction:column;align-items:flex-start;gap:32px;padding-bottom:clamp(28px,3vw,44px);border-bottom:1px solid rgba(7,27,43,.14)">
+        <div>
+          
+          <h2 style="margin:0;font:300 clamp(44px,10vw,82px)/0.98 Barlow,sans-serif;letter-spacing:.02em;text-transform:uppercase;color:#071B2B;animation:rise 1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 2% entry 50%">RIBs</h2>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:18px;font:500 11px/1.4 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#071B2B"><span>Exclusively authorised by MV Marine in Malta</span><img src="assets/mvmarine.svg" alt="MV Marine" style="height:27px;width:auto;display:block"></div>
+        </div>
+        <div style="display:flex;flex-wrap:nowrap;gap:4px;padding:5px;max-width:100%;border:1px solid rgba(7,27,43,.14);border-radius:999px">
+          <button type="button" onClick="{{ pick23 }}" style-hover="color:#7FB7BC" style="{{ tab23 }}">MV 23GT</button>
+          <button type="button" onClick="{{ pick27 }}" style-hover="color:#F47F4B" style="{{ tab27 }}">MV 27GT</button>
+          <button type="button" onClick="{{ pickOther }}" style-hover="color:#F47F4B" style="{{ tabOther }}">Other models</button>
+        </div>
+      </div>
+
+      <div style="{{ panel23 }}">
+      <div style="display: flex; flex-direction: column; gap: 36px">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:clamp(28px,4vw,72px);align-items:center;padding:clamp(20px,2.5vw,40px) 0 0">
+          <div>
+            
+            <div style="box-sizing: border-box; display: flex; flex-direction: column; gap: 5px"><div style="display:inline-flex;align-self:flex-start;align-items:center;gap:10px;margin-bottom:18px;padding:8px 14px 8px 12px;border:1px solid rgba(244,127,75,.55);border-radius:999px;font:500 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#071B2B"><span style="width:7px;height:7px;border-radius:50%;background:#F47F4B"></span>In stock</div><div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 24px;margin:0 0 8px"><h3 style="animation: rise 1.2s cubic-bezier(.2,.8,.2,1) both; animation-timeline: view(); animation-range: entry 0% entry 48%; margin: 0; font: 300 clamp(44px,6.4vw,104px)/0.9 Barlow,sans-serif; letter-spacing: .01em; text-transform: uppercase; color: #7FB7BC; font-weight: 300; font-family: Barlow; font-size: 48px">MV 23GT</h3></div><div style="font: 300 clamp(17px,1.5vw,22px)/1.4 'Funnel Sans',sans-serif; color: #8F9399; margin-bottom: 18px">Compact soul, uncompromising quality</div><p style="margin: 0 0 28px; max-width: 520px; font: 300 16px/1.7 'Funnel Sans',sans-serif; color: #3d4b57; text-wrap: pretty">Seven metres that give more. A large sunbathing area forward, a convertible dinette aft, and a hull that stays composed when the afternoon breeze fills in — agile enough for a solo run to Comino, complete enough for a full day with family and friends.</p></div>
+            
+            
+            <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:28px;animation:rise 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 44%">
+              <div style="font:600 11px/1 Barlow,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:#8F9399">Includes</div>
+              <div style="display:flex;flex-wrap:wrap;gap:8px"><span style="display:inline-flex;align-items:center;padding:9px 15px;border:1px solid rgba(7,27,43,.18);border-radius:999px;font:400 10px/1 Barlow,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#3d4b57;white-space:nowrap">200HP White Suzuki</span><span style="display:inline-flex;align-items:center;padding:9px 15px;border:1px solid rgba(7,27,43,.18);border-radius:999px;font:400 10px/1 Barlow,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#3d4b57;white-space:nowrap">Fly-by-wire controls</span><span style="display:inline-flex;align-items:center;padding:9px 15px;border:1px solid rgba(7,27,43,.18);border-radius:999px;font:400 10px/1 Barlow,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#3d4b57;white-space:nowrap">Display &amp; installation</span><span style="display:inline-flex;align-items:center;padding:9px 15px;border:1px solid rgba(7,27,43,.18);border-radius:999px;font:400 10px/1 Barlow,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#3d4b57;white-space:nowrap">Trailer</span><span style="display:inline-flex;align-items:center;padding:9px 15px;border:1px solid rgba(7,27,43,.18);border-radius:999px;font:400 10px/1 Barlow,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#3d4b57;white-space:nowrap">Console cover</span><span style="display:inline-flex;align-items:center;padding:9px 15px;border:1px solid rgba(7,27,43,.18);border-radius:999px;font:400 10px/1 Barlow,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#3d4b57;white-space:nowrap">Starter kit</span></div>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:18px 28px"><a href="#enquiry-form" onClick="{{ enq23 }}" style="display:inline-flex;align-items:center;gap:12px;padding:19px 32px;border-radius:999px;background:#071B2B;color:#FDF9F5;font:600 14px/1 Barlow,sans-serif;letter-spacing:.14em;text-transform:uppercase;transition:background .35s ease" style-hover="background:#F47F4B">Enquire</a><a href="https://mvmarine.it/it/mv-23gt/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;transition:color .3s ease" style-hover="color:#F47F4B">Discover more at MV Marine<span style="font-size:12px;letter-spacing:0">↗</span></a></div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:stretch;gap:clamp(6px,1vw,14px);animation:glideX 1.3s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 2% entry 55%">
+            <img src="assets/mv23gt.webp" alt="MV 23GT deck plan view" style="width:100%;height:auto;display:block;filter:drop-shadow(0 40px 60px rgba(7,27,43,.14))">
+            <img src="assets/mv23gt-engine.webp" alt="200HP Suzuki outboard" style="width:clamp(80px,11%,140px);height:auto;display:block;align-self:flex-end;margin-top:clamp(-10px,-1vw,-4px);filter:drop-shadow(0 18px 26px rgba(7,27,43,.16))">
+          </div>
+        </div>
+
+        <div>
+          <div style="display:flex;align-items:baseline;gap:14px;font:400 11px/1 Barlow,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:#8F9399;padding-bottom:22px;border-bottom:1px solid rgba(7,27,43,.14);animation:rise 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 44%"><span>Gallery</span><span style="letter-spacing:.18em;opacity:.65">{{ gal23 }}</span></div>
+          <div data-gallery="" style="{{ shotGrid }}" onClick="{{ openShot }}">
+            <div data-shot="" data-id="mv-23gt-rib-open-sea-run-malta" style="position:relative;aspect-ratio:1/1;overflow:hidden;background:rgba(7,27,43,.04);cursor:pointer"><div class="shot-skin"><i class="shot-mark"></i></div><img class="shot-img" data-src="assets/gallery/mv-23gt-rib-open-sea-run-malta.webp" alt="MV 23GT RIB running across open sea" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;display:block"><div class="shot-veil" style="position:absolute;inset:0;z-index:2;pointer-events:none;background:#071B2B"></div></div>
+            <div data-shot="" data-id="mv-23gt-rib-coastal-run-malta" style="position:relative;aspect-ratio:1/1;overflow:hidden;background:rgba(7,27,43,.04);cursor:pointer"><div class="shot-skin"><i class="shot-mark"></i></div><img class="shot-img" data-src="assets/gallery/mv-23gt-rib-coastal-run-malta.webp" alt="MV 23GT RIB at speed along the coast" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;display:block"><div class="shot-veil" style="position:absolute;inset:0;z-index:2;pointer-events:none;background:#071B2B"></div></div>
+            <div data-shot="" data-id="mv-23gt-rib-cruising-bimini-malta" style="position:relative;aspect-ratio:1/1;overflow:hidden;background:rgba(7,27,43,.04);cursor:pointer"><div class="shot-skin"><i class="shot-mark"></i></div><img class="shot-img" data-src="assets/gallery/mv-23gt-rib-cruising-bimini-malta.webp" alt="MV 23GT RIB cruising at speed with the bimini frame up" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;display:block"><div class="shot-veil" style="position:absolute;inset:0;z-index:2;pointer-events:none;background:#071B2B"></div></div>
+            <div data-shot="" data-id="mv-23gt-rib-under-way-side-profile-malta" style="position:relative;aspect-ratio:1/1;overflow:hidden;background:rgba(7,27,43,.04);cursor:pointer"><div class="shot-skin"><i class="shot-mark"></i></div><img class="shot-img" data-src="assets/gallery/mv-23gt-rib-under-way-side-profile-malta.webp" alt="MV 23GT RIB under way, side profile" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;display:block"><div class="shot-veil" style="position:absolute;inset:0;z-index:2;pointer-events:none;background:#071B2B"></div></div>
+            <div data-shot="" data-id="mv-23gt-rib-on-the-water-malta" style="position:relative;aspect-ratio:1/1;overflow:hidden;background:rgba(7,27,43,.04);cursor:pointer"><div class="shot-skin"><i class="shot-mark"></i></div><img class="shot-img" data-src="assets/gallery/mv-23gt-rib-on-the-water-malta.webp" alt="MV 23GT RIB under way on the water" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;display:block"><div class="shot-veil" style="position:absolute;inset:0;z-index:2;pointer-events:none;background:#071B2B"></div></div>
+            <div data-shot="" data-id="mv-23gt-rib-bow-console-at-sea-malta" style="position:relative;aspect-ratio:1/1;overflow:hidden;background:rgba(7,27,43,.04);cursor:pointer"><div class="shot-skin"><i class="shot-mark"></i></div><img class="shot-img" data-src="assets/gallery/mv-23gt-rib-bow-console-at-sea-malta.webp" alt="MV 23GT RIB bow and helm console at sea" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;display:block"><div class="shot-veil" style="position:absolute;inset:0;z-index:2;pointer-events:none;background:#071B2B"></div></div>
+            <div data-shot="" data-id="mv-23gt-rib-stern-bimini-top-malta" style="position:relative;aspect-ratio:1/1;overflow:hidden;background:rgba(7,27,43,.04);cursor:pointer"><div class="shot-skin"><i class="shot-mark"></i></div><img class="shot-img" data-src="assets/gallery/mv-23gt-rib-stern-bimini-top-malta.webp" alt="MV 23GT RIB stern with bimini top and teak swim platform" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;display:block"><div class="shot-veil" style="position:absolute;inset:0;z-index:2;pointer-events:none;background:#071B2B"></div></div>
+            <div data-shot="" data-id="mv-23gt-rib-deck-layout-aerial-malta" style="position:relative;aspect-ratio:1/1;overflow:hidden;background:rgba(7,27,43,.04);cursor:pointer"><div class="shot-skin"><i class="shot-mark"></i></div><img class="shot-img" data-src="assets/gallery/mv-23gt-rib-deck-layout-aerial-malta.webp" alt="MV 23GT RIB full deck layout from above" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;display:block"><div class="shot-veil" style="position:absolute;inset:0;z-index:2;pointer-events:none;background:#071B2B"></div></div>
+            <div data-shot="" data-id="mv-23gt-rib-aft-sundeck-malta" style="position:relative;aspect-ratio:1/1;overflow:hidden;background:rgba(7,27,43,.04);cursor:pointer"><div class="shot-skin"><i class="shot-mark"></i></div><img class="shot-img" data-src="assets/gallery/mv-23gt-rib-aft-sundeck-malta.webp" alt="MV 23GT RIB aft sundeck under the bimini frame" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;display:block"><div class="shot-veil" style="position:absolute;inset:0;z-index:2;pointer-events:none;background:#071B2B"></div></div>
+            <div data-shot="" data-id="mv-23gt-rib-aft-dinette-seating-malta" style="position:relative;aspect-ratio:1/1;overflow:hidden;background:rgba(7,27,43,.04);cursor:pointer"><div class="shot-skin"><i class="shot-mark"></i></div><img class="shot-img" data-src="assets/gallery/mv-23gt-rib-aft-dinette-seating-malta.webp" alt="MV 23GT RIB aft dinette seating" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;display:block"><div class="shot-veil" style="position:absolute;inset:0;z-index:2;pointer-events:none;background:#071B2B"></div></div>
+            <div data-shot="" data-id="mv-23gt-rib-bow-mooring-cleat-malta" style="position:relative;aspect-ratio:1/1;overflow:hidden;background:rgba(7,27,43,.04);cursor:pointer"><div class="shot-skin"><i class="shot-mark"></i></div><img class="shot-img" data-src="assets/gallery/mv-23gt-rib-bow-mooring-cleat-malta.webp" alt="MV 23GT RIB bow with mooring cleat and sundeck" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;display:block"><div class="shot-veil" style="position:absolute;inset:0;z-index:2;pointer-events:none;background:#071B2B"></div></div>
+          </div>
+        </div>
+
+        <div>
+          <div style="font:400 11px/1 Barlow,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:#8F9399;padding-bottom:22px;border-bottom:1px solid rgba(7,27,43,.14);animation:rise 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 44%">SPEC HIGHLIGHTS</div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(180px,100%),1fr));border-left:1px solid rgba(7,27,43,.10)">
+            <div style="padding:26px 24px;border-right:1px solid rgba(7,27,43,.10);border-bottom:1px solid rgba(7,27,43,.10);animation:riseSm 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 38%"><div style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;margin-bottom:12px">Overall length</div><div style="font:300 26px/1 Barlow,sans-serif;color:#071B2B">6.99 m</div></div>
+            <div style="padding:26px 24px;border-right:1px solid rgba(7,27,43,.10);border-bottom:1px solid rgba(7,27,43,.10);animation:riseSm 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 38%"><div style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;margin-bottom:12px">Overall width</div><div style="font:300 26px/1 Barlow,sans-serif;color:#071B2B">2.68 m</div></div>
+            <div style="padding:26px 24px;border-right:1px solid rgba(7,27,43,.10);border-bottom:1px solid rgba(7,27,43,.10);animation:riseSm 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 38%"><div style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;margin-bottom:12px">Inside width</div><div style="font:300 26px/1 Barlow,sans-serif;color:#071B2B">1.66 m</div></div>
+            <div style="padding:26px 24px;border-right:1px solid rgba(7,27,43,.10);border-bottom:1px solid rgba(7,27,43,.10);animation:riseSm 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 38%"><div style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;margin-bottom:12px">Compartments</div><div style="font:300 26px/1 Barlow,sans-serif;color:#071B2B">5</div></div>
+            <div style="padding:26px 24px;border-right:1px solid rgba(7,27,43,.10);border-bottom:1px solid rgba(7,27,43,.10);animation:riseSm 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 38%"><div style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;margin-bottom:12px">Tubular diameter</div><div style="font:300 26px/1 Barlow,sans-serif;color:#071B2B">42 / 56 cm</div></div>
+            <div style="padding:26px 24px;border-right:1px solid rgba(7,27,43,.10);border-bottom:1px solid rgba(7,27,43,.10);animation:riseSm 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 38%"><div style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;margin-bottom:12px">Comfortable for</div><div style="font:300 26px/1 Barlow,sans-serif;color:#071B2B">6–8 people</div></div>
+            <div style="padding:26px 24px;border-right:1px solid rgba(7,27,43,.10);border-bottom:1px solid rgba(7,27,43,.10);animation:riseSm 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 38%"><div style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;margin-bottom:12px">Shank length</div><div style="font:300 26px/1 Barlow,sans-serif;color:#071B2B">XL</div></div>
+            <div style="padding:26px 24px;border-right:1px solid rgba(7,27,43,.10);border-bottom:1px solid rgba(7,27,43,.10);animation:riseSm 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 38%"><div style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;margin-bottom:12px">Certification</div><div style="font:300 26px/1 Barlow,sans-serif;color:#071B2B">CE CAT C</div></div>
+            <div style="padding:26px 24px;border-right:1px solid rgba(7,27,43,.10);border-bottom:1px solid rgba(7,27,43,.10);animation:riseSm 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 38%"><div style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;margin-bottom:12px">Max. installable power</div><div style="font:300 26px/1 Barlow,sans-serif;color:#071B2B">147 kW / 200 cv</div></div>
+            <div style="padding:26px 24px;border-right:1px solid rgba(7,27,43,.10);border-bottom:1px solid rgba(7,27,43,.10);animation:riseSm 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 38%"><div style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;margin-bottom:12px">Fuel tank</div><div style="font:300 26px/1 Barlow,sans-serif;color:#071B2B">205 L</div></div>
+            <div style="padding:26px 24px;border-right:1px solid rgba(7,27,43,.10);border-bottom:1px solid rgba(7,27,43,.10);animation:riseSm 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 38%"><div style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;margin-bottom:12px">Water tank</div><div style="font:300 26px/1 Barlow,sans-serif;color:#071B2B">60 L</div></div>
+            <div style="padding:26px 24px;border-right:1px solid rgba(7,27,43,.10);border-bottom:1px solid rgba(7,27,43,.10);animation:riseSm 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 38%"><div style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;margin-bottom:12px">Engine</div><div style="font:300 26px/1 Barlow,sans-serif;color:#071B2B">200HP Suzuki</div></div>
+          </div>
+        </div>
+
+        <div>
+          <div style="border-top:1px solid rgba(7,27,43,.14);animation:rise 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 44%">
+            <button type="button" onClick="{{ accT_c23 }}" style-hover="color:#F47F4B" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:clamp(12px,2vw,24px);padding:clamp(22px,2.6vw,28px) 0;background:none;border:0;cursor:pointer;text-align:left;font:400 clamp(15px,1.5vw,20px)/1.3 Barlow,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#071B2B"><span style="display:flex;align-items:baseline;gap:clamp(12px,1.4vw,22px)"><span>Console &amp; seating</span><span style="font:400 11px/1 Barlow,sans-serif;letter-spacing:.18em;color:#8F9399">05</span></span><span style="{{ accI_c23 }}">+</span></button>
+            <div style="{{ acc_c23 }}"><div style="min-height:0;overflow:hidden"><ul style="margin:0;padding:0 0 32px 0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:14px 40px;font:300 15px/1.6 'Funnel Sans',sans-serif;color:#3d4b57">
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Fibreglass (VTR) driving console with plexiglass sides</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Steering wheel &amp; hydraulic steering system</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Windshield &amp; stainless steel handrail</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Front seat integrated in console</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Pilot seat backrest in fibreglass (VTR) and marine-grade vinyl (SKY)</li>
+            </ul></div></div>
+          </div>
+          <div style="border-top:1px solid rgba(7,27,43,.14);animation:rise 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 44%">
+            <button type="button" onClick="{{ accT_d23 }}" style-hover="color:#F47F4B" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:clamp(12px,2vw,24px);padding:clamp(22px,2.6vw,28px) 0;background:none;border:0;cursor:pointer;text-align:left;font:400 clamp(15px,1.5vw,20px)/1.3 Barlow,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#071B2B"><span style="display:flex;align-items:baseline;gap:clamp(12px,1.4vw,22px)"><span>Deck &amp; structure</span><span style="font:400 11px/1 Barlow,sans-serif;letter-spacing:.18em;color:#8F9399">06</span></span><span style="{{ accI_d23 }}">+</span></button>
+            <div style="{{ acc_d23 }}"><div style="min-height:0;overflow:hidden"><ul style="margin:0;padding:0 0 32px 0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:14px 40px;font:300 15px/1.6 'Funnel Sans',sans-serif;color:#3d4b57">
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Hatch covers with gas struts and locks</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Fibreglass (VTR) bow roller cleats</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Complete bow &amp; stern cushions with closed-cell foam</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Stern platforms with EVA teak finish</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Stern table with support &amp; sundeck extension</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Stainless steel ladder</li>
+            </ul></div></div>
+          </div>
+          <div style="border-top:1px solid rgba(7,27,43,.14);animation:rise 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 44%">
+            <button type="button" onClick="{{ accT_s23 }}" style-hover="color:#F47F4B" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:clamp(12px,2vw,24px);padding:clamp(22px,2.6vw,28px) 0;background:none;border:0;cursor:pointer;text-align:left;font:400 clamp(15px,1.5vw,20px)/1.3 Barlow,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#071B2B"><span style="display:flex;align-items:baseline;gap:clamp(12px,1.4vw,22px)"><span>Systems</span><span style="font:400 11px/1 Barlow,sans-serif;letter-spacing:.18em;color:#8F9399">04</span></span><span style="{{ accI_s23 }}">+</span></button>
+            <div style="{{ acc_s23 }}"><div style="min-height:0;overflow:hidden"><ul style="margin:0;padding:0 0 32px 0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:14px 40px;font:300 15px/1.6 'Funnel Sans',sans-serif;color:#3d4b57">
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">CE-compliant fuel system with 205 L fuel tank</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">12V electrical system</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Freshwater system with 60 L tank, pressure pump &amp; shower</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Bilge pump</li>
+            </ul></div></div>
+          </div>
+          <div style="border-top:1px solid rgba(7,27,43,.14);animation:rise 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 44%">
+            <button type="button" onClick="{{ accT_e23 }}" style-hover="color:#F47F4B" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:clamp(12px,2vw,24px);padding:clamp(22px,2.6vw,28px) 0;background:none;border:0;cursor:pointer;text-align:left;font:400 clamp(15px,1.5vw,20px)/1.3 Barlow,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#071B2B"><span style="display:flex;align-items:baseline;gap:clamp(12px,1.4vw,22px)"><span>Equipment &amp; accessories</span><span style="font:400 11px/1 Barlow,sans-serif;letter-spacing:.18em;color:#8F9399">09</span></span><span style="{{ accI_e23 }}">+</span></button>
+            <div style="{{ acc_e23 }}"><div style="min-height:0;overflow:hidden"><ul style="margin:0;padding:0 0 32px 0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:14px 40px;font:300 15px/1.6 'Funnel Sans',sans-serif;color:#3d4b57">
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Electric winch with anchor &amp; chain</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Foldable stainless-steel roll bar with navigation lights</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Bimini in stainless steel with Dune sunbrella fabric</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Bimini bow extension with poles, Dune sunbrella</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Clarion stereo system with 2 speakers</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Icom VHF</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Courtesy light in speakers</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Lifting &amp; towing eyebolts</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Paddles, pump &amp; repair kit</li>
+            </ul></div></div>
+          </div>
+          <div style="border-top:1px solid rgba(7,27,43,.14);border-bottom:1px solid rgba(7,27,43,.14);animation:rise 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 44%">
+            <button type="button" onClick="{{ accT_f23 }}" style-hover="color:#F47F4B" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:clamp(12px,2vw,24px);padding:clamp(22px,2.6vw,28px) 0;background:none;border:0;cursor:pointer;text-align:left;font:400 clamp(15px,1.5vw,20px)/1.3 Barlow,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#071B2B"><span style="display:flex;align-items:baseline;gap:clamp(12px,1.4vw,22px)"><span>Finishes</span><span style="font:400 11px/1 Barlow,sans-serif;letter-spacing:.18em;color:#8F9399">04</span></span><span style="{{ accI_f23 }}">+</span></button>
+            <div style="{{ acc_f23 }}"><div style="min-height:0;overflow:hidden"><ul style="margin:0;padding:0 0 32px 0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:14px 40px;font:300 15px/1.6 'Funnel Sans',sans-serif;color:#3d4b57">
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Tube: White Orca Hypalon</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Hull / deck: White</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Tube bumper / logo: Military Grey</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Upholstery: Mirage MIR-013</li>
+            </ul></div></div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div style="{{ panel27 }}">
+      <div style="display: flex; flex-direction: column; gap: 36px">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:clamp(28px,4vw,72px);align-items:center;padding:clamp(20px,2.5vw,40px) 0 0">
+          <div>
+            
+            <div style="display:inline-flex;align-self:flex-start;align-items:center;gap:10px;margin-bottom:18px;padding:8px 14px 8px 12px;border:1px solid rgba(244,127,75,.55);border-radius:999px;font:500 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#071B2B"><span style="width:7px;height:7px;border-radius:50%;background:#F47F4B"></span>In stock</div><div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 24px;margin:0 0 8px"><h3 style="animation: rise 1.2s cubic-bezier(.2,.8,.2,1) both; animation-timeline: view(); animation-range: entry 0% entry 48%; margin: 0; font: 300 clamp(44px,6.4vw,104px)/0.9 Barlow,sans-serif; letter-spacing: .01em; text-transform: uppercase; color: #F47F4B; font-weight: 300;font-size:48px">MV 27GT</h3></div>
+            <div style="font:300 clamp(17px,1.5vw,22px)/1.4 'Funnel Sans',sans-serif;color:#8F9399;margin-bottom:18px">Unrivalled manoeuvrability and space</div>
+            <p style="margin:0 0 28px;max-width:520px;font:300 16px/1.7 'Funnel Sans',sans-serif;color:#3d4b57;text-wrap:pretty">Nearly eight metres of composure. Six compartments, a 300 horsepower Stealth Line Suzuki on the transom, and a deck laid out for more guests. This is the boat you take out on a Sunday morning when want to make for Gozo before lunch back home.</p>
+            <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:28px;animation:rise 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 44%">
+              <div style="font:600 11px/1 Barlow,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:#8F9399">Includes</div>
+              <div style="display:flex;flex-wrap:wrap;gap:8px"><span style="display:inline-flex;align-items:center;padding:9px 15px;border:1px solid rgba(7,27,43,.18);border-radius:999px;font:400 10px/1 Barlow,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#3d4b57;white-space:nowrap">300HP Stealth Line Suzuki</span><span style="display:inline-flex;align-items:center;padding:9px 15px;border:1px solid rgba(7,27,43,.18);border-radius:999px;font:400 10px/1 Barlow,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#3d4b57;white-space:nowrap">Fly-by-wire controls</span><span style="display:inline-flex;align-items:center;padding:9px 15px;border:1px solid rgba(7,27,43,.18);border-radius:999px;font:400 10px/1 Barlow,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#3d4b57;white-space:nowrap">Display &amp; installation</span><span style="display:inline-flex;align-items:center;padding:9px 15px;border:1px solid rgba(7,27,43,.18);border-radius:999px;font:400 10px/1 Barlow,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#3d4b57;white-space:nowrap">Trailer</span><span style="display:inline-flex;align-items:center;padding:9px 15px;border:1px solid rgba(7,27,43,.18);border-radius:999px;font:400 10px/1 Barlow,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#3d4b57;white-space:nowrap">Console cover</span><span style="display:inline-flex;align-items:center;padding:9px 15px;border:1px solid rgba(7,27,43,.18);border-radius:999px;font:400 10px/1 Barlow,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#3d4b57;white-space:nowrap">Starter kit</span></div>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:18px 28px"><a href="#enquiry-form" onClick="{{ enq27 }}" style="display: inline-flex; align-items: center; gap: 12px; padding:19px 32px; border-radius: 999px; background: #071B2B; color: #FDF9F5; font:600 14px/1 Barlow,sans-serif; letter-spacing:.14em; text-transform: uppercase; transition: background .35s ease" style-hover="background:#F47F4B">Enquire</a><a href="https://mvmarine.it/it/mv-27gt/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;transition:color .3s ease" style-hover="color:#F47F4B">Discover more at MV Marine<span style="font-size:12px;letter-spacing:0">↗</span></a></div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:stretch;gap:clamp(6px,1vw,14px);animation:glideX 1.3s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 2% entry 55%">
+            <img src="assets/mv27gt.webp" alt="MV 27GT deck plan view" style="width:100%;height:auto;display:block;filter:drop-shadow(0 40px 60px rgba(7,27,43,.14))">
+            <img src="assets/mv27gt-engine.webp" alt="300HP Stealth Line Suzuki outboard" style="width:clamp(80px,11%,140px);height:auto;display:block;align-self:flex-end;margin-top:clamp(-10px,-1vw,-4px);filter:drop-shadow(0 18px 26px rgba(7,27,43,.16))">
+          </div>
+        </div>
+
+        <div>
+          <div style="display:flex;align-items:baseline;gap:14px;font:400 11px/1 Barlow,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:#8F9399;padding-bottom:22px;border-bottom:1px solid rgba(7,27,43,.14);animation:rise 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 44%"><span>Gallery</span><span style="letter-spacing:.18em;opacity:.65">{{ gal27 }}</span></div>
+          <div data-gallery="" style="{{ shotGrid }}" onClick="{{ openShot }}">
+            <div data-shot="" data-id="mv-27gt-rib-cruising-open-water-malta" style="position:relative;aspect-ratio:1/1;overflow:hidden;background:rgba(7,27,43,.04);cursor:pointer"><div class="shot-skin"><i class="shot-mark"></i></div><img class="shot-img" data-src="assets/gallery/mv-27gt-rib-cruising-open-water-malta.webp" alt="MV 27GT RIB cruising in open water off Malta" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;display:block"><div class="shot-veil" style="position:absolute;inset:0;z-index:2;pointer-events:none;background:#071B2B"></div></div>
+            <div data-shot="" data-id="mv-27gt-rib-family-day-out-malta" style="position:relative;aspect-ratio:1/1;overflow:hidden;background:rgba(7,27,43,.04);cursor:pointer"><div class="shot-skin"><i class="shot-mark"></i></div><img class="shot-img" data-src="assets/gallery/mv-27gt-rib-family-day-out-malta.webp" alt="MV 27GT RIB family day out along the Maltese coast" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;display:block"><div class="shot-veil" style="position:absolute;inset:0;z-index:2;pointer-events:none;background:#071B2B"></div></div>
+            <div data-shot="" data-id="mv-27gt-rib-on-the-water-malta" style="position:relative;aspect-ratio:1/1;overflow:hidden;background:rgba(7,27,43,.04);cursor:pointer"><div class="shot-skin"><i class="shot-mark"></i></div><img class="shot-img" data-src="assets/gallery/mv-27gt-rib-on-the-water-malta.webp" alt="MV 27GT RIB under way on the water" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;display:block"><div class="shot-veil" style="position:absolute;inset:0;z-index:2;pointer-events:none;background:#071B2B"></div></div>
+            <div data-shot="" data-id="mv-27gt-rib-suzuki-300-harbour-malta" style="position:relative;aspect-ratio:1/1;overflow:hidden;background:rgba(7,27,43,.04);cursor:pointer"><div class="shot-skin"><i class="shot-mark"></i></div><img class="shot-img" data-src="assets/gallery/mv-27gt-rib-suzuki-300-harbour-malta.webp" alt="MV 27GT RIB with Suzuki 300 outboard in harbour" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;display:block"><div class="shot-veil" style="position:absolute;inset:0;z-index:2;pointer-events:none;background:#071B2B"></div></div>
+            <div data-shot="" data-id="mv-27gt-rib-side-console-detail-malta" style="position:relative;aspect-ratio:1/1;overflow:hidden;background:rgba(7,27,43,.04);cursor:pointer"><div class="shot-skin"><i class="shot-mark"></i></div><img class="shot-img" data-src="assets/gallery/mv-27gt-rib-side-console-detail-malta.webp" alt="MV 27GT RIB side console and bimini frame detail" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;display:block"><div class="shot-veil" style="position:absolute;inset:0;z-index:2;pointer-events:none;background:#071B2B"></div></div>
+            <div data-shot="" data-id="mv-27gt-rib-bow-tube-detail-malta" style="position:relative;aspect-ratio:1/1;overflow:hidden;background:rgba(7,27,43,.04);cursor:pointer"><div class="shot-skin"><i class="shot-mark"></i></div><img class="shot-img" data-src="assets/gallery/mv-27gt-rib-bow-tube-detail-malta.webp" alt="MV 27GT RIB bow and tube detail" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;display:block"><div class="shot-veil" style="position:absolute;inset:0;z-index:2;pointer-events:none;background:#071B2B"></div></div>
+            <div data-shot="" data-id="mv-27gt-rib-hull-branding-detail-malta" style="position:relative;aspect-ratio:1/1;overflow:hidden;background:rgba(7,27,43,.04);cursor:pointer"><div class="shot-skin"><i class="shot-mark"></i></div><img class="shot-img" data-src="assets/gallery/mv-27gt-rib-hull-branding-detail-malta.webp" alt="MV 27GT RIB hull and tube branding detail" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;display:block"><div class="shot-veil" style="position:absolute;inset:0;z-index:2;pointer-events:none;background:#071B2B"></div></div>
+            <div data-shot="" data-id="mv-27gt-rib-helm-console-steering-malta" style="position:relative;aspect-ratio:1/1;overflow:hidden;background:rgba(7,27,43,.04);cursor:pointer"><div class="shot-skin"><i class="shot-mark"></i></div><img class="shot-img" data-src="assets/gallery/mv-27gt-rib-helm-console-steering-malta.webp" alt="MV 27GT RIB helm console and steering wheel" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;display:block"><div class="shot-veil" style="position:absolute;inset:0;z-index:2;pointer-events:none;background:#071B2B"></div></div>
+            <div data-shot="" data-id="mv-27gt-rib-stern-bimini-top-malta" style="position:relative;aspect-ratio:1/1;overflow:hidden;background:rgba(7,27,43,.04);cursor:pointer"><div class="shot-skin"><i class="shot-mark"></i></div><img class="shot-img" data-src="assets/gallery/mv-27gt-rib-stern-bimini-top-malta.webp" alt="MV 27GT RIB stern with bimini top and swim platform" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;display:block"><div class="shot-veil" style="position:absolute;inset:0;z-index:2;pointer-events:none;background:#071B2B"></div></div>
+            <div data-shot="" data-id="mv-27gt-rib-deck-layout-aerial-malta" style="position:relative;aspect-ratio:1/1;overflow:hidden;background:rgba(7,27,43,.04);cursor:pointer"><div class="shot-skin"><i class="shot-mark"></i></div><img class="shot-img" data-src="assets/gallery/mv-27gt-rib-deck-layout-aerial-malta.webp" alt="MV 27GT RIB full deck layout from above" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;display:block"><div class="shot-veil" style="position:absolute;inset:0;z-index:2;pointer-events:none;background:#071B2B"></div></div>
+            <div data-shot="" data-id="mv-27gt-rib-bow-sundeck-malta" style="position:relative;aspect-ratio:1/1;overflow:hidden;background:rgba(7,27,43,.04);cursor:pointer"><div class="shot-skin"><i class="shot-mark"></i></div><img class="shot-img" data-src="assets/gallery/mv-27gt-rib-bow-sundeck-malta.webp" alt="MV 27GT RIB bow sundeck" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;display:block"><div class="shot-veil" style="position:absolute;inset:0;z-index:2;pointer-events:none;background:#071B2B"></div></div>
+            <div data-shot="" data-id="mv-27gt-rib-aft-dinette-seating-malta" style="position:relative;aspect-ratio:1/1;overflow:hidden;background:rgba(7,27,43,.04);cursor:pointer"><div class="shot-skin"><i class="shot-mark"></i></div><img class="shot-img" data-src="assets/gallery/mv-27gt-rib-aft-dinette-seating-malta.webp" alt="MV 27GT RIB aft dinette seating and console" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;display:block"><div class="shot-veil" style="position:absolute;inset:0;z-index:2;pointer-events:none;background:#071B2B"></div></div>
+          </div>
+        </div>
+
+        <div>
+          <div style="font:400 11px/1 Barlow,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:#8F9399;padding-bottom:22px;border-bottom:1px solid rgba(7,27,43,.14);animation:rise 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 44%">SPEC HIGHLIGHTS</div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(180px,100%),1fr));border-left:1px solid rgba(7,27,43,.10)">
+            <div style="padding:26px 24px;border-right:1px solid rgba(7,27,43,.10);border-bottom:1px solid rgba(7,27,43,.10);animation:riseSm 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 38%"><div style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;margin-bottom:12px">Overall length</div><div style="font:300 26px/1 Barlow,sans-serif;color:#071B2B">7.85 m</div></div>
+            <div style="padding:26px 24px;border-right:1px solid rgba(7,27,43,.10);border-bottom:1px solid rgba(7,27,43,.10);animation:riseSm 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 38%"><div style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;margin-bottom:12px">Overall width</div><div style="font:300 26px/1 Barlow,sans-serif;color:#071B2B">2.90 m</div></div>
+            <div style="padding:26px 24px;border-right:1px solid rgba(7,27,43,.10);border-bottom:1px solid rgba(7,27,43,.10);animation:riseSm 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 38%"><div style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;margin-bottom:12px">Inside width</div><div style="font:300 26px/1 Barlow,sans-serif;color:#071B2B">1.80 m</div></div>
+            <div style="padding:26px 24px;border-right:1px solid rgba(7,27,43,.10);border-bottom:1px solid rgba(7,27,43,.10);animation:riseSm 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 38%"><div style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;margin-bottom:12px">Compartments</div><div style="font:300 26px/1 Barlow,sans-serif;color:#071B2B">6</div></div>
+            <div style="padding:26px 24px;border-right:1px solid rgba(7,27,43,.10);border-bottom:1px solid rgba(7,27,43,.10);animation:riseSm 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 38%"><div style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;margin-bottom:12px">Tubular diameter</div><div style="font:300 26px/1 Barlow,sans-serif;color:#071B2B">46 / 60 cm</div></div>
+            <div style="padding:26px 24px;border-right:1px solid rgba(7,27,43,.10);border-bottom:1px solid rgba(7,27,43,.10);animation:riseSm 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 38%"><div style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;margin-bottom:12px">Comfortable for</div><div style="font:300 26px/1 Barlow,sans-serif;color:#071B2B">8–10 people</div></div>
+            <div style="padding:26px 24px;border-right:1px solid rgba(7,27,43,.10);border-bottom:1px solid rgba(7,27,43,.10);animation:riseSm 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 38%"><div style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;margin-bottom:12px">Shank length</div><div style="font:300 26px/1 Barlow,sans-serif;color:#071B2B">XL</div></div>
+            <div style="padding:26px 24px;border-right:1px solid rgba(7,27,43,.10);border-bottom:1px solid rgba(7,27,43,.10);animation:riseSm 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 38%"><div style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;margin-bottom:12px">Certification</div><div style="font:300 26px/1 Barlow,sans-serif;color:#071B2B">CE CAT C</div></div>
+            <div style="padding:26px 24px;border-right:1px solid rgba(7,27,43,.10);border-bottom:1px solid rgba(7,27,43,.10);animation:riseSm 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 38%"><div style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;margin-bottom:12px">Max. installable power</div><div style="font:300 26px/1 Barlow,sans-serif;color:#071B2B">184 kW / 300 cv</div></div>
+            <div style="padding:26px 24px;border-right:1px solid rgba(7,27,43,.10);border-bottom:1px solid rgba(7,27,43,.10);animation:riseSm 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 38%"><div style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;margin-bottom:12px">Fuel tank</div><div style="font:300 26px/1 Barlow,sans-serif;color:#071B2B">285 L</div></div>
+            <div style="padding:26px 24px;border-right:1px solid rgba(7,27,43,.10);border-bottom:1px solid rgba(7,27,43,.10);animation:riseSm 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 38%"><div style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;margin-bottom:12px">Water tank</div><div style="font:300 26px/1 Barlow,sans-serif;color:#071B2B">72 L</div></div>
+            <div style="padding:26px 24px;border-right:1px solid rgba(7,27,43,.10);border-bottom:1px solid rgba(7,27,43,.10);animation:riseSm 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 38%"><div style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;margin-bottom:12px">Engine</div><div style="font:300 26px/1 Barlow,sans-serif;color:#071B2B">300HP Suzuki</div></div>
+          </div>
+        </div>
+
+        <div>
+          <div style="border-top:1px solid rgba(7,27,43,.14);animation:rise 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 44%">
+            <button type="button" onClick="{{ accT_c27 }}" style-hover="color:#F47F4B" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:clamp(12px,2vw,24px);padding:clamp(22px,2.6vw,28px) 0;background:none;border:0;cursor:pointer;text-align:left;font:400 clamp(15px,1.5vw,20px)/1.3 Barlow,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#071B2B"><span style="display:flex;align-items:baseline;gap:clamp(12px,1.4vw,22px)"><span>Console &amp; seating</span><span style="font:400 11px/1 Barlow,sans-serif;letter-spacing:.18em;color:#8F9399">05</span></span><span style="{{ accI_c27 }}">+</span></button>
+            <div style="{{ acc_c27 }}"><div style="min-height:0;overflow:hidden"><ul style="margin:0;padding:0 0 32px 0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:14px 40px;font:300 15px/1.6 'Funnel Sans',sans-serif;color:#3d4b57">
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Fibreglass (VTR) driving console</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Steering wheel &amp; hydraulic steering system</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Windshield &amp; stainless steel handrail</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Front seat integrated in console</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Pilot seat backrest in fibreglass (VTR) and marine-grade vinyl (SKY)</li>
+            </ul></div></div>
+          </div>
+          <div style="border-top:1px solid rgba(7,27,43,.14);animation:rise 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 44%">
+            <button type="button" onClick="{{ accT_d27 }}" style-hover="color:#F47F4B" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:clamp(12px,2vw,24px);padding:clamp(22px,2.6vw,28px) 0;background:none;border:0;cursor:pointer;text-align:left;font:400 clamp(15px,1.5vw,20px)/1.3 Barlow,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#071B2B"><span style="display:flex;align-items:baseline;gap:clamp(12px,1.4vw,22px)"><span>Deck &amp; structure</span><span style="font:400 11px/1 Barlow,sans-serif;letter-spacing:.18em;color:#8F9399">07</span></span><span style="{{ accI_d27 }}">+</span></button>
+            <div style="{{ acc_d27 }}"><div style="min-height:0;overflow:hidden"><ul style="margin:0;padding:0 0 32px 0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:14px 40px;font:300 15px/1.6 'Funnel Sans',sans-serif;color:#3d4b57">
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Hatch covers with gas struts and locks</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Fibreglass (VTR) bow roller cleats</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Complete bow &amp; stern cushions with closed-cell foam</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Complete EVA teak flooring</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Stern platforms with EVA teak finish</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Stern table with support &amp; sundeck extension</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Stainless steel ladder</li>
+            </ul></div></div>
+          </div>
+          <div style="border-top:1px solid rgba(7,27,43,.14);animation:rise 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 44%">
+            <button type="button" onClick="{{ accT_s27 }}" style-hover="color:#F47F4B" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:clamp(12px,2vw,24px);padding:clamp(22px,2.6vw,28px) 0;background:none;border:0;cursor:pointer;text-align:left;font:400 clamp(15px,1.5vw,20px)/1.3 Barlow,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#071B2B"><span style="display:flex;align-items:baseline;gap:clamp(12px,1.4vw,22px)"><span>Systems</span><span style="font:400 11px/1 Barlow,sans-serif;letter-spacing:.18em;color:#8F9399">04</span></span><span style="{{ accI_s27 }}">+</span></button>
+            <div style="{{ acc_s27 }}"><div style="min-height:0;overflow:hidden"><ul style="margin:0;padding:0 0 32px 0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:14px 40px;font:300 15px/1.6 'Funnel Sans',sans-serif;color:#3d4b57">
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">CE-compliant fuel system with 285 L fuel tank</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">12V electrical system</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Freshwater system with 72 L tank, pressure pump &amp; shower</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Bilge pump</li>
+            </ul></div></div>
+          </div>
+          <div style="border-top:1px solid rgba(7,27,43,.14);animation:rise 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 44%">
+            <button type="button" onClick="{{ accT_e27 }}" style-hover="color:#F47F4B" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:clamp(12px,2vw,24px);padding:clamp(22px,2.6vw,28px) 0;background:none;border:0;cursor:pointer;text-align:left;font:400 clamp(15px,1.5vw,20px)/1.3 Barlow,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#071B2B"><span style="display:flex;align-items:baseline;gap:clamp(12px,1.4vw,22px)"><span>Equipment &amp; accessories</span><span style="font:400 11px/1 Barlow,sans-serif;letter-spacing:.18em;color:#8F9399">09</span></span><span style="{{ accI_e27 }}">+</span></button>
+            <div style="{{ acc_e27 }}"><div style="min-height:0;overflow:hidden"><ul style="margin:0;padding:0 0 32px 0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:14px 40px;font:300 15px/1.6 'Funnel Sans',sans-serif;color:#3d4b57">
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Electric winch with anchor &amp; chain</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Foldable stainless-steel roll bar with navigation lights</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Bimini in stainless steel with Cadet Grey sunbrella fabric</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Bimini bow extension with poles, Cadet Grey sunbrella</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">JL Audio hide-away stereo system with 4 speakers</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Garmin 7" GPS &amp; VHF</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Courtesy light in speakers</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Lifting &amp; towing eyebolts</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Paddles, pump &amp; repair kit</li>
+            </ul></div></div>
+          </div>
+          <div style="border-top:1px solid rgba(7,27,43,.14);border-bottom:1px solid rgba(7,27,43,.14);animation:rise 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 44%">
+            <button type="button" onClick="{{ accT_f27 }}" style-hover="color:#F47F4B" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:clamp(12px,2vw,24px);padding:clamp(22px,2.6vw,28px) 0;background:none;border:0;cursor:pointer;text-align:left;font:400 clamp(15px,1.5vw,20px)/1.3 Barlow,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#071B2B"><span style="display:flex;align-items:baseline;gap:clamp(12px,1.4vw,22px)"><span>Finishes</span><span style="font:400 11px/1 Barlow,sans-serif;letter-spacing:.18em;color:#8F9399">04</span></span><span style="{{ accI_f27 }}">+</span></button>
+            <div style="{{ acc_f27 }}"><div style="min-height:0;overflow:hidden"><ul style="margin:0;padding:0 0 32px 0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:14px 40px;font:300 15px/1.6 'Funnel Sans',sans-serif;color:#3d4b57">
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Tube: Military Grey Orca Hypalon</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Hull / deck: White</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Tube bumper / logo: Black</li>
+              <li style="padding-left:18px;border-left:1px solid rgba(143,181,181,.6)">Upholstery: Mirage MIR-405</li>
+            </ul></div></div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div style="{{ panelOther }}">
+      <div style="display:flex;flex-direction:column;gap:clamp(28px,3vw,44px);padding:clamp(28px,3vw,48px) 0 0">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:clamp(20px,3vw,56px);align-items:end">
+          <div>
+            <div style="font:500 11px/1 Barlow,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:#8F9399;margin-bottom:18px">Sourced to order</div>
+            <h3 style="margin:0;font:300 48px/0.95 Barlow,sans-serif;letter-spacing:.01em;text-transform:uppercase;color:#F47F4B">The full range</h3>
+          </div>
+          <p style="margin:0;max-width:560px;font:300 16px/1.7 'Funnel Sans',sans-serif;color:#3d4b57;text-wrap:pretty">Beyond the boats in stock, we can source any model from the MV Marine shipyard, built to your specification. Custom builds take around three to four months to complete with installations, so to be on the water for the coming season, order by February.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr));border-top:1px solid rgba(7,27,43,.10);border-left:1px solid rgba(7,27,43,.10)">
+          <div style="display:flex;flex-direction:column;gap:18px;padding:clamp(24px,2.4vw,34px);border-right:1px solid rgba(7,27,43,.10);border-bottom:1px solid rgba(7,27,43,.10);background:#FDF9F5;transition:background .35s ease" style-hover="background:#F6EEE6">
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div style="font:500 10px/1 Barlow,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#8F9399">GT range</div>
+              <div style="font:300 clamp(28px,2.6vw,38px)/1 Barlow,sans-serif;letter-spacing:.02em;text-transform:uppercase;color:#F47F4B">MV 25GT</div>
+            </div>
+            <div style="font:300 15px/1.6 'Funnel Sans',sans-serif;color:#3d4b57;text-wrap:pretty">The middle of the GT family — a step up in deck space from the 23GT without the 27GT’s footprint.</div>
+            <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-top:16px;border-top:1px solid rgba(7,27,43,.10)">
+              <span style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399">Length</span>
+              <span style="font:300 18px/1 Barlow,sans-serif;color:#071B2B;white-space:nowrap">7.5 m</span>
+            </div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-top:12px;border-top:1px solid rgba(7,27,43,.10)">
+              <span style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399">Max power</span>
+              <span style="font:300 18px/1 Barlow,sans-serif;color:#071B2B;white-space:nowrap">250 hp</span>
+            </div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-top:12px;border-top:1px solid rgba(7,27,43,.10)">
+              <span style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399">Comfortable for</span>
+              <span style="font:300 18px/1 Barlow,sans-serif;color:#071B2B;white-space:nowrap">6–8 people</span>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:flex-start;gap:12px;padding-top:22px"><a href="https://mvmarine.it/en/mv-series-25gt" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;transition:color .3s ease" style-hover="color:#F47F4B">Discover more<span style="font-size:12px;letter-spacing:0">↗</span></a></div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:18px;padding:clamp(24px,2.4vw,34px);border-right:1px solid rgba(7,27,43,.10);border-bottom:1px solid rgba(7,27,43,.10);background:#FDF9F5;transition:background .35s ease" style-hover="background:#F6EEE6">
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div style="font:500 10px/1 Barlow,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#8F9399">Mito range</div>
+              <div style="font:300 clamp(28px,2.6vw,38px)/1 Barlow,sans-serif;letter-spacing:.02em;text-transform:uppercase;color:#F47F4B">Mito 29</div>
+            </div>
+            <div style="font:300 15px/1.6 'Funnel Sans',sans-serif;color:#3d4b57;text-wrap:pretty">Double-stepped sport hull with a cabin and head below. The entry point to the Mito line.</div>
+            <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-top:16px;border-top:1px solid rgba(7,27,43,.10)">
+              <span style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399">Length</span>
+              <span style="font:300 18px/1 Barlow,sans-serif;color:#071B2B;white-space:nowrap">8.65 m</span>
+            </div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-top:12px;border-top:1px solid rgba(7,27,43,.10)">
+              <span style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399">Max power</span>
+              <span style="font:300 18px/1 Barlow,sans-serif;color:#071B2B;white-space:nowrap">500 hp</span>
+            </div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-top:12px;border-top:1px solid rgba(7,27,43,.10)">
+              <span style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399">Comfortable for</span>
+              <span style="font:300 18px/1 Barlow,sans-serif;color:#071B2B;white-space:nowrap">8–10 people</span>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:flex-start;gap:12px;padding-top:22px"><a href="https://mvmarine.it/en/mv-mito-series-29/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;transition:color .3s ease" style-hover="color:#F47F4B">Discover more<span style="font-size:12px;letter-spacing:0">↗</span></a></div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:18px;padding:clamp(24px,2.4vw,34px);border-right:1px solid rgba(7,27,43,.10);border-bottom:1px solid rgba(7,27,43,.10);background:#FDF9F5;transition:background .35s ease" style-hover="background:#F6EEE6">
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div style="font:500 10px/1 Barlow,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#8F9399">Mito range</div>
+              <div style="font:300 clamp(28px,2.6vw,38px)/1 Barlow,sans-serif;letter-spacing:.02em;text-transform:uppercase;color:#F47F4B">Mito 31</div>
+            </div>
+            <div style="font:300 15px/1.6 'Funnel Sans',sans-serif;color:#3d4b57;text-wrap:pretty">Comfortable for six to eight, with a sheltered cabin and the stepped hull’s pace for longer island hops.</div>
+            <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-top:16px;border-top:1px solid rgba(7,27,43,.10)">
+              <span style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399">Length</span>
+              <span style="font:300 18px/1 Barlow,sans-serif;color:#071B2B;white-space:nowrap">9.35 m</span>
+            </div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-top:12px;border-top:1px solid rgba(7,27,43,.10)">
+              <span style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399">Max power</span>
+              <span style="font:300 18px/1 Barlow,sans-serif;color:#071B2B;white-space:nowrap">700 hp</span>
+            </div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-top:12px;border-top:1px solid rgba(7,27,43,.10)">
+              <span style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399">Comfortable for</span>
+              <span style="font:300 18px/1 Barlow,sans-serif;color:#071B2B;white-space:nowrap">6–8 people</span>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:flex-start;gap:12px;padding-top:22px"><a href="https://mvmarine.it/en/mv-mito-series-31/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;transition:color .3s ease" style-hover="color:#F47F4B">Discover more<span style="font-size:12px;letter-spacing:0">↗</span></a></div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:18px;padding:clamp(24px,2.4vw,34px);border-right:1px solid rgba(7,27,43,.10);border-bottom:1px solid rgba(7,27,43,.10);background:#FDF9F5;transition:background .35s ease" style-hover="background:#F6EEE6">
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div style="font:500 10px/1 Barlow,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#8F9399">Mito range</div>
+              <div style="font:300 clamp(28px,2.6vw,38px)/1 Barlow,sans-serif;letter-spacing:.02em;text-transform:uppercase;color:#F47F4B">Mito 40</div>
+            </div>
+            <div style="font:300 15px/1.6 'Funnel Sans',sans-serif;color:#3d4b57;text-wrap:pretty">A maxi RIB comfortable for ten to twelve, rated for up to three outboards.</div>
+            <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-top:16px;border-top:1px solid rgba(7,27,43,.10)">
+              <span style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399">Length</span>
+              <span style="font:300 18px/1 Barlow,sans-serif;color:#071B2B;white-space:nowrap">12.14 m</span>
+            </div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-top:12px;border-top:1px solid rgba(7,27,43,.10)">
+              <span style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399">Max power</span>
+              <span style="font:300 18px/1 Barlow,sans-serif;color:#071B2B;white-space:nowrap">1,350 hp</span>
+            </div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-top:12px;border-top:1px solid rgba(7,27,43,.10)">
+              <span style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399">Comfortable for</span>
+              <span style="font:300 18px/1 Barlow,sans-serif;color:#071B2B;white-space:nowrap">10–12 people</span>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:flex-start;gap:12px;padding-top:22px"><a href="https://mvmarine.it/en/mv-mito-series-40/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;transition:color .3s ease" style-hover="color:#F47F4B">Discover more<span style="font-size:12px;letter-spacing:0">↗</span></a></div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:18px;padding:clamp(24px,2.4vw,34px);border-right:1px solid rgba(7,27,43,.10);border-bottom:1px solid rgba(7,27,43,.10);background:#FDF9F5;transition:background .35s ease" style-hover="background:#F6EEE6">
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div style="font:500 10px/1 Barlow,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#8F9399">Mito range</div>
+              <div style="font:300 clamp(28px,2.6vw,38px)/1 Barlow,sans-serif;letter-spacing:.02em;text-transform:uppercase;color:#F47F4B">Mito 45</div>
+            </div>
+            <div style="font:300 15px/1.6 'Funnel Sans',sans-serif;color:#3d4b57;text-wrap:pretty">The shipyard’s flagship. Ask us about build slots and configuration.</div>
+            <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-top:16px;border-top:1px solid rgba(7,27,43,.10)">
+              <span style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399">Length</span>
+              <span style="font:300 18px/1 Barlow,sans-serif;color:#071B2B;white-space:nowrap">13.8 m</span>
+            </div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-top:12px;border-top:1px solid rgba(7,27,43,.10)">
+              <span style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399">Max power</span>
+              <span style="font:300 18px/1 Barlow,sans-serif;color:#071B2B;white-space:nowrap">1,200 hp</span>
+            </div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-top:12px;border-top:1px solid rgba(7,27,43,.10)">
+              <span style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399">Comfortable for</span>
+              <span style="font:300 18px/1 Barlow,sans-serif;color:#071B2B;white-space:nowrap">10–12 people</span>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:flex-start;gap:12px;padding-top:22px"><a href="https://mvmarine.it/en/mv-mito-series-45efb" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;transition:color .3s ease" style-hover="color:#F47F4B">Discover more<span style="font-size:12px;letter-spacing:0">↗</span></a></div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:18px;padding:clamp(24px,2.4vw,34px);border-right:1px solid rgba(7,27,43,.10);border-bottom:1px solid rgba(7,27,43,.10);background:#FDF9F5;transition:background .35s ease" style-hover="background:#F6EEE6">
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div style="font:500 10px/1 Barlow,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#8F9399">Classic range</div>
+              <div style="font:300 clamp(28px,2.6vw,38px)/1 Barlow,sans-serif;letter-spacing:.02em;text-transform:uppercase;color:#F47F4B">MV 620</div>
+            </div>
+            <div style="font:300 15px/1.6 'Funnel Sans',sans-serif;color:#3d4b57;text-wrap:pretty">Compact and easy to trailer — a straightforward first RIB.</div>
+            <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-top:16px;border-top:1px solid rgba(7,27,43,.10)">
+              <span style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399">Length</span>
+              <span style="font:300 18px/1 Barlow,sans-serif;color:#071B2B;white-space:nowrap">6.2 m</span>
+            </div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-top:12px;border-top:1px solid rgba(7,27,43,.10)">
+              <span style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399">Max power</span>
+              <span style="font:300 18px/1 Barlow,sans-serif;color:#071B2B;white-space:nowrap">150 hp</span>
+            </div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-top:12px;border-top:1px solid rgba(7,27,43,.10)">
+              <span style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399">Comfortable for</span>
+              <span style="font:300 18px/1 Barlow,sans-serif;color:#071B2B;white-space:nowrap">4–6 people</span>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:flex-start;gap:12px;padding-top:22px"><a href="https://mvmarine.it/en/mv-series-620" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;font:400 10px/1 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8F9399;transition:color .3s ease" style-hover="color:#F47F4B">Discover more<span style="font-size:12px;letter-spacing:0">↗</span></a></div>
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:18px 28px">
+          <a href="#enquiry-form" onClick="{{ enqOther }}" style="display:inline-flex;align-items:center;gap:12px;padding:19px 32px;border-radius:999px;background:#071B2B;color:#FDF9F5;font:600 14px/1 Barlow,sans-serif;letter-spacing:.14em;text-transform:uppercase;transition:background .35s ease" style-hover="background:#F47F4B">Enquire</a>
+          
+        </div>
+      </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="care" data-screen-label="Care" style="padding:clamp(72px,9vw,140px) clamp(20px,3.2vw,52px);background:#FDF9F5">
+    <div style="max-width:1520px;margin:0 auto">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:clamp(30px,4vw,80px);align-items:end;padding-bottom:clamp(38px,4vw,60px);border-bottom:1px solid rgba(7,27,43,.14)">
+        <div>
+          <div style="font: 400 11px/1 Barlow,sans-serif; letter-spacing: .28em; text-transform: uppercase; color: #8F9399; margin-bottom: 20px; font-weight: 600">Expert-led care</div>
+          <h2 style="margin:0;font:300 clamp(44px,10vw,82px)/0.98 Barlow,sans-serif;letter-spacing:.02em;text-transform:uppercase;color:#071B2B;animation:rise 1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 2% entry 50%">beyond the purchase</h2>
+        </div>
+        <p style="margin:0;font:300 17px/1.7 'Funnel Sans',sans-serif;color:#3d4b57;text-wrap:pretty;animation:rise 1s cubic-bezier(.2,.8,.2,1) .1s both;animation-timeline:view();animation-range:entry 2% entry 50%">Buying the boat is the easiest part, so we take pride in guiding how you care for and upkeep your acquisition. From the first viewing to your fifth summer at sea, we'll make sure you're confident every step of the way so you can enjoy your time out at sea.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,max(280px,30%)),1fr));column-gap:clamp(28px,4vw,72px);row-gap:0">
+        <div style="padding:clamp(34px,4vw,54px) 0;border-bottom:1px solid rgba(7,27,43,.12);animation:rise .9s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 4% entry 50%">
+          <div style="margin-bottom:22px;height:36px;display:flex;align-items:flex-end"><span style="font-family:'Material Symbols Outlined';font-size:34px;line-height:1;font-weight:200;font-variation-settings:'FILL' 0,'wght' 200,'GRAD' 0,'opsz' 24;letter-spacing:normal;font-feature-settings:'liga';white-space:nowrap;color:#F47F4B">local_shipping</span></div>
+          <h3 style="margin:0 0 16px;font:400 clamp(18px,1.7vw,24px)/1.25 Barlow,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#071B2B">Delivery</h3>
+          <p style="margin:0;font:300 15px/1.7 'Funnel Sans',sans-serif;color:#3d4b57;text-wrap:pretty">Your vessel arrives on the water, not on a schedule. We handle transport and launch anywhere in Maltese waters.</p>
+        </div>
+        <div style="padding:clamp(34px,4vw,54px) 0;border-bottom:1px solid rgba(7,27,43,.12);animation:rise .9s cubic-bezier(.2,.8,.2,1) .08s both;animation-timeline:view();animation-range:entry 4% entry 50%">
+          <div style="margin-bottom:22px;height:36px;display:flex;align-items:flex-end"><span style="font-family:'Material Symbols Outlined';font-size:34px;line-height:1;font-weight:200;font-variation-settings:'FILL' 0,'wght' 200,'GRAD' 0,'opsz' 24;letter-spacing:normal;font-feature-settings:'liga';white-space:nowrap;color:#F47F4B">tune</span></div>
+          <h3 style="margin:0 0 16px;font:400 clamp(18px,1.7vw,24px)/1.25 Barlow,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#071B2B">Setup</h3>
+          <p style="margin:0;font:300 15px/1.7 'Funnel Sans',sans-serif;color:#3d4b57;text-wrap:pretty">Engine run-in, electronics paired, trim calibrated, tender kit aboard. On our RIBs, the outboard can be specified or changed to whichever brand you prefer. You step on to a boat that is already yours.</p>
+        </div>
+        <div style="padding:clamp(34px,4vw,54px) 0;border-bottom:1px solid rgba(7,27,43,.12);animation:rise .9s cubic-bezier(.2,.8,.2,1) .16s both;animation-timeline:view();animation-range:entry 4% entry 50%">
+          <div style="margin-bottom:22px;height:36px;display:flex;align-items:flex-end"><span style="font-family:'Material Symbols Outlined';font-size:34px;line-height:1;font-weight:200;font-variation-settings:'FILL' 0,'wght' 200,'GRAD' 0,'opsz' 24;letter-spacing:normal;font-feature-settings:'liga';white-space:nowrap;color:#F47F4B">cleaning_services</span></div>
+          <h3 style="margin:0 0 16px;font:400 clamp(18px,1.7vw,24px)/1.25 Barlow,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#071B2B">Upkeep</h3>
+          <p style="margin:0;font:300 15px/1.7 'Funnel Sans',sans-serif;color:#3d4b57;text-wrap:pretty">Wash-downs, antifoul, tube and upholstery care, winter cover. The details that keep a hull looking new in its fifth season.</p>
+        </div>
+        <div style="padding:clamp(34px,4vw,54px) 0;border-bottom:1px solid rgba(7,27,43,.12);animation:rise .9s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 4% entry 50%">
+          <div style="margin-bottom:22px;height:36px;display:flex;align-items:flex-end"><span style="font-family:'Material Symbols Outlined';font-size:34px;line-height:1;font-weight:200;font-variation-settings:'FILL' 0,'wght' 200,'GRAD' 0,'opsz' 24;letter-spacing:normal;font-feature-settings:'liga';white-space:nowrap;color:#F47F4B">build</span></div>
+          <h3 style="margin:0 0 16px;font:400 clamp(18px,1.7vw,24px)/1.25 Barlow,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#071B2B">Maintenance</h3>
+          <p style="margin:0;font:300 15px/1.7 'Funnel Sans',sans-serif;color:#3d4b57;text-wrap:pretty">Servicing to Suzuki and Yamaha intervals, logged and stamped, so nothing about your vessel's condition is ever guessed at.</p>
+        </div>
+        <div style="padding:clamp(34px,4vw,54px) 0;border-bottom:1px solid rgba(7,27,43,.12);animation:rise .9s cubic-bezier(.2,.8,.2,1) .08s both;animation-timeline:view();animation-range:entry 4% entry 50%">
+          <div style="margin-bottom:22px;height:36px;display:flex;align-items:flex-end"><span style="font-family:'Material Symbols Outlined';font-size:34px;line-height:1;font-weight:200;font-variation-settings:'FILL' 0,'wght' 200,'GRAD' 0,'opsz' 24;letter-spacing:normal;font-feature-settings:'liga';white-space:nowrap;color:#F47F4B">support_agent</span></div>
+          <h3 style="margin:0 0 16px;font:400 clamp(18px,1.7vw,24px)/1.25 Barlow,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#071B2B">Technical support</h3>
+          <p style="margin:0;font:300 15px/1.7 'Funnel Sans',sans-serif;color:#3d4b57;text-wrap:pretty">One number, answered by the people who commissioned your boat. Diagnostics on the pontoon, not in a ticket queue.</p>
+        </div>
+        <div style="padding:clamp(34px,4vw,54px) 0;border-bottom:1px solid rgba(7,27,43,.12);animation:rise .9s cubic-bezier(.2,.8,.2,1) .16s both;animation-timeline:view();animation-range:entry 4% entry 50%">
+          <div style="margin-bottom:22px;height:36px;display:flex;align-items:flex-end"><span style="font-family:'Material Symbols Outlined';font-size:34px;line-height:1;font-weight:200;font-variation-settings:'FILL' 0,'wght' 200,'GRAD' 0,'opsz' 24;letter-spacing:normal;font-feature-settings:'liga';white-space:nowrap;color:#F47F4B">handshake</span></div>
+          <h3 style="margin:0 0 16px;font:400 clamp(18px,1.7vw,24px)/1.25 Barlow,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#071B2B">Lifetime care</h3>
+          <p style="margin:0;font:300 15px/1.7 'Funnel Sans',sans-serif;color:#3d4b57;text-wrap:pretty">For as long as the vessel is yours: priority workshop slots, parts held on the island, and a record of every hour she has run.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" data-screen-label="Contact" style="position: relative; overflow: hidden; background: #071B2B; color: #FDF9F5; padding: clamp(110px,10vw,160px) clamp(20px,3.2vw,52px) clamp(48px,5vw,72px); padding-bottom: 129px; padding-top: 196px">
+    <div style="position:absolute;top:-1px;left:0;width:100%;height:clamp(64px,7.2vw,132px);overflow:hidden;pointer-events:none;z-index:2"><svg viewBox="0 0 1440 100" preserveAspectRatio="none" style="position:absolute;top:0;left:0;shape-rendering:geometricPrecision;width:200%;height:100%;will-change:transform;backface-visibility:hidden;animation:waveDrift 11s linear infinite"><path d="M0,50 C120,-6 240,-6 360,50 C480,106 600,106 720,50 C840,-6 960,-6 1080,50 C1200,106 1320,106 1440,50 L1440,0 L0,0 Z" fill="#FDF9F5"></path></svg></div>
+
+    <div style="max-width: 1520px; margin: 0 auto; display: flex; flex-direction: column; gap: 0px">
+      <div style="font: 400 11px/1 Barlow,sans-serif; letter-spacing: .28em; text-transform: uppercase; color: #FEF9F5; margin-bottom: clamp(15px,2vw,26px); font-weight: 600">WHAT ARE YOU WAITING FOR?</div>
+      <h2 style="margin: 0; max-width: 1100px; font: 200 clamp(38px,7vw,120px)/0.95 Barlow,sans-serif; letter-spacing: .02em; text-transform: uppercase; color: #FDF9F5; animation: rise 1.1s cubic-bezier(.2,.8,.2,1) both; animation-timeline: view(); animation-range: entry 2% entry 55%; font-size: 80px"><span style="color:#8FB5B5">Your life at sea</span><br>starts with us</h2>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:26px;margin-top:clamp(21px,2.5vw,36px)">
+        <a href="#enquiry-form" style="display:inline-flex;align-items:center;gap:14px;padding:19px 32px;border-radius:999px;background:#FDF9F5;color:#071B2B;font:600 14px/1 Barlow,sans-serif;letter-spacing:.14em;text-transform:uppercase;transition:background .35s ease,color .35s ease" style-hover="background:#F47F4B;color:#FDF9F5"><span>Enquire</span></a>
+        
+      </div>
+      
+
+    </div>
+  </section>
+
+  <!-- PARALLAX BAND -->
+  
+
+  <section id="faq" data-screen-label="Questions" style="padding:clamp(72px,9vw,130px) clamp(20px,3.2vw,52px) clamp(72px,9vw,130px);background:#FDF9F5">
+    <div style="max-width:1520px;margin:0 auto">
+      <div style="font: 400 11px/1 Barlow,sans-serif; letter-spacing: .28em; text-transform: uppercase; color: #8F9399; margin-bottom: 20px; font-weight: 600">JUST IN CASE YOU'RE WONDERING</div>
+      <h2 style="margin:0 0 clamp(34px,4vw,60px);font:300 clamp(32px,4.4vw,64px)/1 Barlow,sans-serif;letter-spacing:.02em;text-transform:uppercase;color:#071B2B;animation:rise 1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 2% entry 50%">Questions</h2>
+
+      <div style="border-top:1px solid rgba(7,27,43,.14);animation:rise 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 44%">
+        <button type="button" onClick="{{ accT_q2 }}" style-hover="color:#F47F4B" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:clamp(12px,2vw,24px);padding:clamp(20px,2.4vw,26px) 0;background:none;border:0;cursor:pointer;text-align:left;font:300 clamp(17px,1.6vw,22px)/1.4 'Funnel Sans',sans-serif;color:#071B2B"><span>Do I need a licence to take one out in Malta?</span><span style="{{ accI_q2 }}">+</span></button>
+        <div style="{{ acc_q2 }}"><div style="min-height:0;overflow:hidden"><p style="margin:0;padding:0 0 30px;max-width:760px;font:300 16px/1.75 'Funnel Sans',sans-serif;color:#3d4b57;text-wrap:pretty">A licence is required for both vessel classes. We walk you through the current Transport Malta requirements for the craft you have chosen and point you to a recognised course, well before handover day.</p></div></div>
+      </div>
+      <div style="border-top:1px solid rgba(7,27,43,.14);animation:rise 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 44%">
+        <button type="button" onClick="{{ accT_q3 }}" style-hover="color:#F47F4B" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:clamp(12px,2vw,24px);padding:clamp(20px,2.4vw,26px) 0;background:none;border:0;cursor:pointer;text-align:left;font:300 clamp(17px,1.6vw,22px)/1.4 'Funnel Sans',sans-serif;color:#071B2B"><span>How long from order to handover?</span><span style="{{ accI_q3 }}">+</span></button>
+        <div style="{{ acc_q3 }}"><div style="min-height:0;overflow:hidden"><p style="margin:0;padding:0 0 30px;max-width:760px;font:300 16px/1.75 'Funnel Sans',sans-serif;color:#3d4b57;text-wrap:pretty">Boats in stock can be handed over within a few days of purchase. Custom builds take around three to four months to complete with installations, so to have yours for the coming season, order by February. We confirm the delivery window in writing before any deposit is taken.</p></div></div>
+      </div>
+      <div style="border-top:1px solid rgba(7,27,43,.14);animation:rise 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 44%">
+        <button type="button" onClick="{{ accT_q4 }}" style-hover="color:#F47F4B" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:clamp(12px,2vw,24px);padding:clamp(20px,2.4vw,26px) 0;background:none;border:0;cursor:pointer;text-align:left;font:300 clamp(17px,1.6vw,22px)/1.4 'Funnel Sans',sans-serif;color:#071B2B"><span>Can I specify the boat to my own taste?</span><span style="{{ accI_q4 }}">+</span></button>
+        <div style="{{ acc_q4 }}"><div style="min-height:0;overflow:hidden"><p style="margin:0;padding:0 0 30px;max-width:760px;font:300 16px/1.75 'Funnel Sans',sans-serif;color:#3d4b57;text-wrap:pretty">Tube colour, gelcoat, upholstery, teak, canvas and electronics are all specified with you before the build slot is confirmed. The standard finishes listed under each model are a starting point, not a limit.</p></div></div>
+      </div>
+      
+    </div>
+  </section>
+
+  
+
+  <section id="team" data-screen-label="Brought to you by" style="padding:0 clamp(20px,3.2vw,52px) clamp(72px,9vw,130px);background:#FDF9F5">
+    <div style="max-width:1520px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:clamp(32px,5vw,72px);padding-top:clamp(48px,6vw,90px);border-top:1px solid rgba(7,27,43,.14)">
+      <div style="display:flex;flex-direction:column;gap:18px;max-width:520px;animation:rise 1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 2% entry 50%">
+        <div style="font:600 11px/1 Barlow,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:#8F9399">Behind the brand</div>
+        <h2 style="margin:0;font:300 clamp(32px,4.4vw,64px)/1 Barlow,sans-serif;letter-spacing:.02em;text-transform:uppercase;color:#071B2B">Luca &amp; Aldo Vella</h2>
+        <p style="margin:0;max-width:460px;font:300 16px/1.7 'Funnel Sans',sans-serif;color:#3d4b57;text-wrap:pretty">Pairing their passion for boating with their business background, this father and son partnership set out to bring a RHIB brand they truly believe in to Malta. With quality always coming first, they guide every client from first enquiry to first trip out, with the utmost care and attention.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:clamp(24px,3vw,48px);animation:rise 1.1s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 44%">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:16px">
+          <img loading="lazy" decoding="async" src="assets/team-luca.webp" alt="Luca Vella" style="width:clamp(100px,10vw,150px);height:auto;display:block">
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:16px">
+          <img loading="lazy" decoding="async" src="assets/team-aldo.webp" alt="Aldo Vella" style="width:clamp(100px,10vw,150px);height:auto;display:block">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer data-screen-label="Footer" style="background:#071B2B;color:#FDF9F5;padding:clamp(40px,5vw,64px) clamp(20px,3.2vw,52px) clamp(36px,4vw,52px)">
+    <div style="max-width:1520px;margin:0 auto">
+      <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:40px">
+        <img src="assets/logo-white.svg" alt="DUO MARINE" style="height:44px;width:auto;display:block">
+        <div style="display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,72px);font:300 14px/1.7 'Funnel Sans',sans-serif;color:rgba(253,249,245,.6)">
+          <div>
+            <div style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:rgba(253,249,245,.4);margin-bottom:12px">Enquiries</div>
+            <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-start">
+              <a href="#enquiry-form" style="color:rgba(253,249,245,.75)" style-hover="color:#F47F4B">Get in touch</a>
+            </div>
+          </div>
+          <div>
+            <div style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:rgba(253,249,245,.4);margin-bottom:12px">Based in</div>
+            <div>Malta</div>
+          </div>
+          <div>
+            <div style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:rgba(253,249,245,.4);margin-bottom:12px">Email</div>
+            <a href="mailto:info@duomarine.mt" style="color:rgba(253,249,245,.75)" style-hover="color:#F47F4B">info@duomarine.mt</a>
+          </div>
+          <div>
+            <div style="font:400 10px/1 Barlow,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:rgba(253,249,245,.4);margin-bottom:12px">Follow</div>
+            <div style="display:flex;flex-direction:column;gap:6px;align-items:flex-start"><a href="https://www.instagram.com/duomarine.mt/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:10px;color:rgba(253,249,245,.75)" style-hover="color:#F47F4B"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" style="display:block;flex:0 0 auto"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"></circle></svg><span>@duomarine.mt</span></a><a href="https://www.facebook.com/duomarine/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:10px;color:rgba(253,249,245,.75)" style-hover="color:#F47F4B"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" style="display:block;flex:0 0 auto"><rect x="3" y="3" width="18" height="18" rx="5"></rect><path d="M13.2 20v-6.6h2.3l.35-2.7H13.2V9c0-.78.22-1.3 1.33-1.3H16V5.3c-.25-.03-1.1-.1-2.08-.1-2.06 0-3.47 1.26-3.47 3.57v1.93H8.1v2.7h2.35V20"></path></svg><span>DUO MARINE</span></a></div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:28px;font:400 10px/1.6 Barlow,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(253,249,245,.34)">© 2026 DUO MARINE &nbsp;·&nbsp; Where performance meets leisure at sea &nbsp;·&nbsp; Exclusively authorised by MV Marine in Malta</div>
+    </div>
+  </footer>
+
+  <div id="leadpage" data-screen-label="Enquiry form" style="position:fixed;inset:0;z-index:450;display:none;overflow-y:auto;-webkit-overflow-scrolling:touch;background:#071B2B;color:#FDF9F5">
+<div style="min-height:100%;box-sizing:border-box;display:flex;justify-content:center;padding:clamp(36px,6vw,80px) clamp(20px,5vw,48px)">
+  <div style="width:100%;max-width:560px;display:flex;flex-direction:column;gap:clamp(32px,5vw,48px)">
+    <header style="display:flex;align-items:center;justify-content:space-between;gap:20px">
+      <a href="#top" onClick="{{ closeLead }}" aria-label="DUO MARINE — go to website" style="display:block"><img src="assets/logo-white.svg" alt="DUO MARINE" style="height:clamp(28px,4vw,36px);width:auto;display:block"></a>
+      <a href="#top" onClick="{{ closeLead }}" style="font:500 10px/1 Barlow,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:rgba(253,249,245,.7)" style-hover="color:#F47F4B">Go to website →</a>
+    </header>
+
+    <div style="display:flex;flex-direction:column;gap:14px;animation:rise .8s cubic-bezier(.2,.8,.2,1) both">
+      <h1 style="margin:0;font:300 clamp(40px,9vw,64px)/0.95 Barlow,sans-serif;letter-spacing:.02em;text-transform:uppercase;color:#FDF9F5">Reach out</h1>
+      <p style="margin:0;font:300 16px/1.65 'Funnel Sans',sans-serif;color:rgba(253,249,245,.72);text-wrap:pretty">Leave your details and we'll be in touch as soon as possible.</p>
+    </div>
+
+    <sc-if value="{{ leadShowForm }}" hint-placeholder-val="{{ true }}">
+      <form name="duo-lead" noValidate="true" onInput="{{ leadInput }}" onChange="{{ leadInput }}" method="POST" data-netlify="true" netlify-honeypot="company" onSubmit="{{ leadSubmit }}" ref="{{ leadFormRef }}" style="display:flex;flex-direction:column;gap:22px;animation:rise .8s cubic-bezier(.2,.8,.2,1) .08s both">
+        <input type="hidden" name="form-name" value="duo-lead">
+        <input type="hidden" name="source" value="{{ leadSource }}">
+        <div style="display:none"><label>Company <input name="company" tabindex="-1" autocomplete="off"></label></div>
+
+        <label style="display:flex;flex-direction:column;gap:10px">
+          <span style="font:500 10px/1 Barlow,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:rgba(253,249,245,.6)">Name <span style="color:#F47F4B">*</span></span>
+          <input name="name" required="required" autocomplete="name" placeholder="Your name" style="box-sizing:border-box;width:100%;min-height:52px;padding:14px 0;background:transparent;border:0;border-bottom:1px solid rgba(253,249,245,.28);outline:none;font:300 18px/1.3 'Funnel Sans',sans-serif;color:#FDF9F5;border-radius:0" style-focus="border-bottom-color:#F47F4B">
+          <sc-if value="{{ err.name }}" hint-placeholder-val="{{ false }}"><span style="font:300 14px/1.4 'Funnel Sans',sans-serif;color:#F47F4B">{{ err.name }}</span></sc-if>
+        </label>
+        <label style="display:flex;flex-direction:column;gap:10px">
+          <span style="font:500 10px/1 Barlow,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:rgba(253,249,245,.6)">Email <span style="color:#F47F4B">*</span></span>
+          <input name="email" type="email" required="required" autocomplete="email" pattern="[^@\s]+@[^@\s]+\.[A-Za-z]{2,}" title="Please enter a full email address with a real domain, e.g. name@gmail.com" onInput="{{ emailInput }}" placeholder="you@example.com" style="box-sizing:border-box;width:100%;min-height:52px;padding:14px 0;background:transparent;border:0;border-bottom:1px solid rgba(253,249,245,.28);outline:none;font:300 18px/1.3 'Funnel Sans',sans-serif;color:#FDF9F5;border-radius:0" style-focus="border-bottom-color:#F47F4B">
+          <sc-if value="{{ err.email }}" hint-placeholder-val="{{ false }}"><span style="font:300 14px/1.4 'Funnel Sans',sans-serif;color:#F47F4B">{{ err.email }}</span></sc-if>
+        </label>
+        <label style="display:flex;flex-direction:column;gap:10px">
+          <span style="font:500 10px/1 Barlow,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:rgba(253,249,245,.6)">Phone <span style="color:#F47F4B">*</span></span>
+          <input name="phone" required="required" type="tel" inputMode="numeric" autocomplete="tel" pattern="\+?[0-9]{6,15}" title="Digits only, e.g. +35699386386" onInput="{{ phoneInput }}" placeholder="+356" style="box-sizing:border-box;width:100%;min-height:52px;padding:14px 0;background:transparent;border:0;border-bottom:1px solid rgba(253,249,245,.28);outline:none;font:300 18px/1.3 'Funnel Sans',sans-serif;color:#FDF9F5;border-radius:0" style-focus="border-bottom-color:#F47F4B">
+          <sc-if value="{{ err.phone }}" hint-placeholder-val="{{ false }}"><span style="font:300 14px/1.4 'Funnel Sans',sans-serif;color:#F47F4B">{{ err.phone }}</span></sc-if>
+        </label>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <span style="font:500 10px/1 Barlow,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:rgba(253,249,245,.6)">Interested in <span style="color:rgba(253,249,245,.38)">(optional)</span> <span style="letter-spacing:.12em;color:rgba(253,249,245,.45)">· choose any</span></span>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <sc-for list="{{ interestOpts }}" as="o" hint-placeholder-count="10">
+              <button type="button" onClick="{{ o.toggle }}" aria-pressed="{{ o.pressed }}" style="{{ o.style }}" style-hover="border-color:#F47F4B">{{ o.label }}</button>
+            </sc-for>
+          </div>
+          <sc-if value="{{ interestErr }}" hint-placeholder-val="{{ false }}">
+            <span style="font:300 14px/1.4 'Funnel Sans',sans-serif;color:#F47F4B">Choose at least one model, or "Not sure yet".</span>
+          </sc-if>
+        </div>
+        <label style="display:flex;flex-direction:column;gap:10px">
+          <span style="font:500 10px/1 Barlow,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:rgba(253,249,245,.6)">Message <span style="color:rgba(253,249,245,.38)">(optional)</span></span>
+          <textarea name="message" rows="3" placeholder="Anything we should know?" style="box-sizing:border-box;width:100%;padding:14px 0;background:transparent;border:0;border-bottom:1px solid rgba(253,249,245,.28);outline:none;font:300 18px/1.5 'Funnel Sans',sans-serif;color:#FDF9F5;resize:vertical;border-radius:0" style-focus="border-bottom-color:#F47F4B"></textarea>
+        </label>
+
+
+        <sc-if value="{{ leadError }}" hint-placeholder-val="{{ false }}">
+          <p style="margin:0;font:300 14px/1.55 'Funnel Sans',sans-serif;color:#F47F4B">We couldn't send that automatically. <a data-lead-mailto="1" href="mailto:info@duomarine.mt" style="color:#F47F4B;border-bottom:1px solid rgba(244,127,75,.5)">Send it by email instead</a> — your details are already filled in.</p>
+        </sc-if>
+
+        <button type="submit" disabled="{{ leadSending }}" style="margin-top:8px;min-height:58px;height:58px;padding:0 40px;border:0;border-radius:999px;background:#FDF9F5;color:#071B2B;font:600 15px/1 Barlow,sans-serif;letter-spacing:.22em;text-transform:uppercase;cursor:pointer;transition:background .35s ease,color .35s ease,opacity .3s ease" style-hover="background:#F47F4B;color:#FDF9F5">{{ leadSubmitLabel }}</button>
+      </form>
+    </sc-if>
+
+    <sc-if value="{{ leadDone }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;flex-direction:column;gap:22px;padding:clamp(28px,5vw,40px) 0;border-top:1px solid rgba(253,249,245,.18);border-bottom:1px solid rgba(253,249,245,.18);animation:rise .7s cubic-bezier(.2,.8,.2,1) both">
+        <span style="font-family:'Material Symbols Outlined';font-size:40px;line-height:1;font-weight:200;color:#F47F4B">check_circle</span>
+        <h2 style="margin:0;font:300 clamp(30px,6vw,42px)/1 Barlow,sans-serif;letter-spacing:.02em;text-transform:uppercase;color:#FDF9F5">Thank you</h2>
+        <p style="margin:0;font:300 16px/1.65 'Funnel Sans',sans-serif;color:rgba(253,249,245,.72)">Your enquiry has been sent. We'll be in touch as soon as possible.</p>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:18px 26px">
+          <a href="#top" onClick="{{ closeLead }}" style="display:inline-flex;align-items:center;min-height:52px;padding:18px 34px;border-radius:999px;background:#FDF9F5;color:#071B2B;font:500 11px/1 Barlow,sans-serif;letter-spacing:.22em;text-transform:uppercase;transition:background .35s ease,color .35s ease" style-hover="background:#F47F4B;color:#FDF9F5">Return to website</a>
+          <button type="button" onClick="{{ leadReset }}" style="padding:8px 0;border:0;background:none;color:rgba(253,249,245,.7);font:500 10px/1 Barlow,sans-serif;letter-spacing:.22em;text-transform:uppercase;cursor:pointer;border-bottom:1px solid rgba(253,249,245,.3)" style-hover="color:#F47F4B">Send another</button>
+        </div>
+      </div>
+    </sc-if>
+
+    <footer style="margin-top:auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font:300 13px/1.5 'Funnel Sans',sans-serif;color:rgba(253,249,245,.5)">
+      <a href="mailto:info@duomarine.mt" style="color:rgba(253,249,245,.7)" style-hover="color:#F47F4B">info@duomarine.mt</a>
+      <a href="https://www.instagram.com/duomarine.mt/" target="_blank" rel="noopener" style="color:rgba(253,249,245,.7)" style-hover="color:#F47F4B">@duomarine.mt</a>
+    </footer>
+  </div>
+</div>
+</div>
+
+  <div id="lightbox" onClick="{{ closeShot }}" style="position:fixed;inset:0;z-index:400;display:none;flex-direction:column;align-items:center;justify-content:center;gap:clamp(14px,2vw,26px);padding:clamp(14px,3vw,44px);background:rgba(7,27,43,.94);backdrop-filter:blur(10px)">
+    <button type="button" onClick="{{ closeShot }}" aria-label="Close" style="position:absolute;top:clamp(12px,2vw,26px);right:clamp(12px,2vw,26px);width:46px;height:46px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(253,249,245,.28);border-radius:999px;background:transparent;color:#FDF9F5;font:300 24px/1 Barlow,sans-serif;cursor:pointer;transition:background .3s ease,border-color .3s ease" style-hover="background:#F47F4B;border-color:#F47F4B">×</button>
+    <button type="button" onClick="{{ prevShot }}" aria-label="Previous" style="position:absolute;left:clamp(8px,2.5vw,34px);top:50%;transform:translateY(-50%);width:clamp(42px,4vw,54px);height:clamp(42px,4vw,54px);display:flex;align-items:center;justify-content:center;border:1px solid rgba(253,249,245,.28);border-radius:999px;background:transparent;color:#FDF9F5;font:300 26px/1 Barlow,sans-serif;cursor:pointer;padding-bottom:4px;transition:background .3s ease,border-color .3s ease" style-hover="background:#F47F4B;border-color:#F47F4B">‹</button>
+    <button type="button" onClick="{{ nextShot }}" aria-label="Next" style="position:absolute;right:clamp(8px,2.5vw,34px);top:50%;transform:translateY(-50%);width:clamp(42px,4vw,54px);height:clamp(42px,4vw,54px);display:flex;align-items:center;justify-content:center;border:1px solid rgba(253,249,245,.28);border-radius:999px;background:transparent;color:#FDF9F5;font:300 26px/1 Barlow,sans-serif;cursor:pointer;padding-bottom:4px;transition:background .3s ease,border-color .3s ease" style-hover="background:#F47F4B;border-color:#F47F4B">›</button>
+    <div onClick="{{ stopShot }}" style="display:flex;align-items:center;justify-content:center;max-width:min(1600px,94vw);flex:0 1 auto;min-height:0">
+      <img data-lbmain="1" alt="" decoding="async" style="max-width:100%;max-height:min(76vh,1100px);width:auto;height:auto;display:block;object-fit:contain;box-shadow:0 40px 90px rgba(0,0,0,.45);opacity:0;transition:opacity .45s cubic-bezier(.2,.8,.2,1),transform .45s cubic-bezier(.2,.8,.2,1)">
+    </div>
+    <div onClick="{{ stopShot }}" style="display:flex;align-items:center;gap:clamp(6px,1vw,12px);flex-wrap:wrap;justify-content:center;max-width:min(1180px,92vw)">
+      <sc-for list="{{ lbThumbs }}" as="t" hint-placeholder-count="6">
+        <img data-lbthumb="1" alt="" decoding="async" onClick="{{ t.on }}" style="{{ t.style }}">
+      </sc-for>
+    </div>
+    <div data-lbcount="1" style="font:400 11px/1 Barlow,sans-serif;letter-spacing:.22em;color:rgba(253,249,245,.6)"></div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = {
+    boat: '23',
+    craft: 'gp',
+    tick: 0,
+    open: {},
+    narrow: typeof window !== 'undefined' && window.innerWidth < 900,
+    menuOpen: false,
+    cols: typeof window !== 'undefined' ? (window.innerWidth >= 1100 ? 6 : window.innerWidth >= 660 ? 3 : 2) : 6,
+    lb: null,
+    lbI: 0
+  };
+
+  shotCols(w) { return w >= 1100 ? 6 : w >= 660 ? 3 : 2; }
+
+  // Gallery photos are ordinary lazy-loaded files now, keyed by the cell's
+  // data-id — the lightbox resolves a path, never a data URL.
+  shotSrc(cell) {
+    if (!cell) return null;
+    const im = cell.querySelector('.shot-img');
+    return im ? (im.getAttribute('data-src') || im.getAttribute('src')) : null;
+  }
+
+  // Enquiry form lives at #enquiry-form — a shareable URL for events/QR codes.
+  isLive() {
+    const h = location.hostname;
+    return location.protocol !== 'file:' && !/claudeusercontent\.com$|^localhost$|^127\./.test(h);
+  }
+
+  // Enquiry form opens at /enquire (QR codes, campaign links); #enquiry-form still works in-page.
+  syncLead() {
+    const onPath = /\/enquire\/?$/.test(window.location.pathname);
+    const onHash = window.location.hash === '#enquiry-form';
+    if (onHash && !onPath && this.isLive()) {
+      history.replaceState(null, '', '/enquire' + window.location.search);
+    }
+    const on = onPath || onHash;
+    if (on) document.body.setAttribute('data-lead', '');
+    else document.body.removeAttribute('data-lead');
+  }
+
+  leadSource() {
+    try {
+      const q = new URLSearchParams(window.location.search);
+      return q.get('event') || q.get('source') || 'website';
+    } catch (e) { return 'website'; }
+  }
+
+  countGalleries() {
+    const pad = n => String(n).padStart(2, '0');
+    const c = p => document.querySelectorAll('[data-shot][data-id^="mv-' + p + 'gt-"]').length;
+    const g23 = pad(c(23)), g27 = pad(c(27));
+    if (g23 !== this.state.gal23 || g27 !== this.state.gal27) this.setState({ gal23: g23, gal27: g27 });
+  }
+
+  componentDidMount() {
+    this.countGalleries(); setTimeout(() => this.countGalleries(), 300);
+    this.onHash = () => this.syncLead();
+    window.addEventListener('hashchange', this.onHash);
+    this.syncLead();
+    this.revealShots();
+    this.syncWidth = () => {
+      const narrow = window.innerWidth < 900;
+      const cols = this.shotCols(window.innerWidth);
+      if (narrow !== this.state.narrow) this.setState({ narrow: narrow, menuOpen: false });
+      if (cols !== this.state.cols) this.setState({ cols: cols });
+    };
+    this.onShotKey = (e) => {
+      if (!this.state.lb) return;
+      if (e.key === 'Escape') {
+        document.body.style.overflow = '';
+        document.body.removeAttribute('data-lb');
+        this.setState({ lb: null });
+      }
+      else if (e.key === 'ArrowRight') this.stepShot(1);
+      else if (e.key === 'ArrowLeft') this.stepShot(-1);
+    };
+    window.addEventListener('keydown', this.onShotKey);
+    this.syncWidth();
+    window.addEventListener('resize', this.syncWidth);
+    this.initParallaxFallback();
+
+    if (!document.fonts || !document.fonts.load) return;
+    const weights = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+    ['Barlow', 'Funnel Sans', 'Lexend Peta'].forEach(fam => {
+      weights.forEach(w => {
+        ['normal', 'italic'].forEach(style => {
+          try { document.fonts.load(style + ' ' + w + ' 16px "' + fam + '"', 'AaBbGg0123'); } catch (e) {}
+        });
+      });
+    });
+  }
+
+  // Safari/iOS has no scroll-driven CSS animations — drive the same drift from rAF instead.
+  initParallaxFallback() {
+    const supported = typeof CSS !== 'undefined' && CSS.supports && CSS.supports('animation-timeline: scroll(root)');
+    if (supported) return;
+    const nodes = Array.prototype.slice.call(document.querySelectorAll('[data-parallax]'));
+    if (!nodes.length) return;
+    nodes.forEach(el => { el.style.animation = 'none'; el.style.willChange = 'transform'; });
+
+    let queued = false;
+    const paint = () => {
+      queued = false;
+      const vh = window.innerHeight || 1;
+      nodes.forEach(el => {
+        const factor = parseFloat(el.getAttribute('data-parallax')) || 0.12;
+        const host = el.parentElement || el;
+        const r = host.getBoundingClientRect();
+        // 0 while the section fills the viewport, growing as it scrolls away
+        const progress = Math.min(1, Math.max(0, (vh - r.top) / (vh + r.height)));
+        el.style.transform = 'translate3d(0,' + (progress * factor * r.height).toFixed(2) + 'px,0)';
+      });
+    };
+    this.onParallaxScroll = () => {
+      if (queued) return;
+      queued = true;
+      window.requestAnimationFrame(paint);
+    };
+    window.addEventListener('scroll', this.onParallaxScroll, { passive: true });
+    window.addEventListener('resize', this.onParallaxScroll);
+    paint();
+  }
+
+  // Data-URL srcs can't ride an inline style (their ';' breaks the declaration
+  // parse) or a parse-time template hole (speculative 404), so assign after render.
+  // Gallery photos load from data-src as they approach the viewport, then fade
+  // in over the wave skin. Deferring the src keeps them as separate files in
+  // the deployed build instead of megabytes of inlined base64.
+  markReady(im) {
+    im.setAttribute('data-ready', '');
+    const skin = im.parentElement && im.parentElement.querySelector('.shot-skin');
+    if (skin) skin.setAttribute('data-done', '');
+  }
+
+  loadShot(im) {
+    if (im._started) return;
+    im._started = true;
+    const u = im.getAttribute('data-src');
+    if (!u) return;
+    im.addEventListener('load', () => this.markReady(im));
+    im.addEventListener('error', () => this.markReady(im));
+    im.src = u;
+    if (im.complete && im.naturalWidth) this.markReady(im);
+  }
+
+  revealShots() {
+    const imgs = document.querySelectorAll('.shot-img:not([data-ready])');
+    if (!imgs.length) {
+      // The panels may not be in the DOM yet on first mount, and a static
+      // page gets no further re-render to retry on — so poll briefly.
+      if ((this._shotTries || 0) < 12) {
+        this._shotTries = (this._shotTries || 0) + 1;
+        clearTimeout(this._shotRetry);
+        this._shotRetry = setTimeout(() => this.revealShots(), 250);
+      }
+      return;
+    }
+    // Safety net: anything the observer hasn't picked up shortly after load
+    // gets fetched anyway — they are small, separate, cacheable files.
+    if (!this._shotAll) {
+      this._shotAll = true;
+      setTimeout(() => {
+        // Visible panel only — pulling all four products at once would queue
+        // two dozen requests against the ones actually on screen.
+        document.querySelectorAll('.shot-img:not([data-ready])').forEach(im => {
+          if (im.offsetParent !== null) this.loadShot(im);
+        });
+      }, 2200);
+    }
+    if (!this._shotIO && 'IntersectionObserver' in window) {
+      this._shotIO = new IntersectionObserver((entries) => {
+        entries.forEach(en => {
+          if (!en.isIntersecting) return;
+          this._shotIO.unobserve(en.target);
+          this.loadShot(en.target);
+        });
+      }, { rootMargin: '600px 0px' });
+    }
+    for (let i = 0; i < imgs.length; i++) {
+      const im = imgs[i];
+      if (im._obs) continue;
+      im._obs = true;
+      if (this._shotIO) this._shotIO.observe(im); else this.loadShot(im);
+    }
+  }
+
+  syncShots() {
+    this.revealShots();
+    const lb = this.state.lb;
+    // Counter written directly rather than through a template hole, so the
+    // raw "{{ }}" can never appear on screen mid-stream.
+    const counter = document.querySelector('[data-lbcount]');
+    if (counter) counter.textContent = lb ? (this.state.lbI + 1) + ' / ' + lb.length : '';
+    const main = document.querySelector('[data-lbmain]');
+    if (main) {
+      const u = lb ? lb[this.state.lbI] : '';
+      if (u && main.getAttribute('src') !== u) {
+        // Fade in on decode rather than on a keyframe: a full-resolution
+        // data URL can take a beat, and the overlay must not wait for it.
+        main.style.opacity = '0';
+        main.style.transform = 'translateY(14px) scale(1.02)';
+        const reveal = () => { main.style.opacity = '1'; main.style.transform = 'none'; };
+        main.onload = reveal;
+        main.onerror = reveal;
+        main.src = u;
+        if (main.complete && main.naturalWidth) reveal();
+      }
+    }
+    // Thumbnails load after the main photo so they can't queue ahead of it.
+    if (this._thumbT) clearTimeout(this._thumbT);
+    this._thumbT = setTimeout(() => {
+      const thumbs = document.querySelectorAll('[data-lbthumb]');
+      for (let i = 0; i < thumbs.length; i++) {
+        const u = lb ? lb[i] : '';
+        if (u && thumbs[i].getAttribute('src') !== u) thumbs[i].src = u;
+      }
+    }, 90);
+  }
+
+  componentDidUpdate() { this.syncShots(); }
+
+  stepShot(d) {
+    this.setState(s => (s.lb ? { lbI: (s.lbI + d + s.lb.length) % s.lb.length } : null));
+  }
+
+  componentWillUnmount() {
+    if (this.onHash) window.removeEventListener('hashchange', this.onHash);
+    document.body.removeAttribute('data-lead');
+    if (this._thumbT) clearTimeout(this._thumbT);
+    if (this._shotIO) this._shotIO.disconnect();
+    if (this._shotRetry) clearTimeout(this._shotRetry);
+    document.body.style.overflow = '';
+    if (this.onShotKey) window.removeEventListener('keydown', this.onShotKey);
+    if (this.syncWidth) window.removeEventListener('resize', this.syncWidth);
+    if (this.onParallaxScroll) {
+      window.removeEventListener('scroll', this.onParallaxScroll);
+      window.removeEventListener('resize', this.onParallaxScroll);
+    }
+  }
+
+  navVals() {
+    const narrow = !!this.state.narrow;
+    const open = !!this.state.menuOpen;
+    return {
+      navWrapStyle: { display: narrow ? 'none' : 'flex', alignItems: 'center', minWidth: 0, marginLeft: 'auto', marginRight: 'clamp(4px,1vw,14px)' },
+      headerStyle: {
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 60,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        gap: 'clamp(10px,2vw,24px)',
+        padding: '0 clamp(16px,3.2vw,52px)',
+        height: 'clamp(56px,8vw,72px)',
+        backdropFilter: 'blur(14px)',
+        background: 'rgba(253,249,245,0.86)',
+        borderBottom: '1px solid rgba(7,27,43,0.09)'
+      },
+      ctaWrapStyle: { display: narrow ? 'none' : 'flex', alignItems: 'center', flex: '0 0 auto' },
+      burgerStyle: {
+        display: narrow ? 'inline-flex' : 'none',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: 44,
+        height: 44,
+        flex: '0 0 auto',
+        order: 3,
+        marginLeft: 'auto',
+        marginRight: -8,
+        background: 'none',
+        border: 0,
+        padding: 0,
+        cursor: 'pointer',
+        color: '#071B2B'
+      },
+      heroImgStyle: narrow
+        ? {
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center center',
+            display: 'block'
+          }
+        : {
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center 46%',
+            display: 'block'
+          },
+      lockupStyle: { display: narrow ? 'none' : 'block', height: 'clamp(20px,4.6vw,30px)', width: 'auto' },
+      wordmarkStyle: { display: narrow ? 'block' : 'none', height: 11, width: 'auto' },
+      burgerIconStyle: {
+        display: 'block',
+        width: 30,
+        height: 'auto',
+        transform: open ? 'rotate(180deg)' : 'none',
+        opacity: open ? 0.55 : 1,
+        transition: 'transform .45s cubic-bezier(.2,.8,.2,1),opacity .3s ease'
+      },
+      menuStyle: {
+        display: narrow ? 'block' : 'none',
+        position: 'absolute',
+        top: '100%',
+        left: 0,
+        right: 0,
+        padding: open ? '10px 20px 26px' : '0 20px',
+        background: 'rgba(253,249,245,0.98)',
+        backdropFilter: 'blur(14px)',
+        borderBottom: open ? '1px solid rgba(7,27,43,0.10)' : '0',
+        maxHeight: open ? '70vh' : 0,
+        overflow: 'hidden',
+        opacity: open ? 1 : 0,
+        pointerEvents: open ? 'auto' : 'none',
+        transition: 'max-height .5s cubic-bezier(.2,.8,.2,1),opacity .35s ease,padding .4s ease'
+      },
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      closeMenu: () => this.setState({ menuOpen: false })
+    };
+  }
+
+  toggle(id) {
+    this.setState(s => ({ open: Object.assign({}, s.open, { [id]: !s.open[id] }) }));
+  }
+
+  tabStyle(active, dark) {
+    return {
+      padding: 'clamp(13px,2vw,18px) clamp(12px,3.2vw,38px)',
+      flex: '0 1 auto',
+      borderRadius: 999,
+      border: 0,
+      cursor: 'pointer',
+      font: '400 clamp(11px,1.15vw,16px)/1 Barlow,sans-serif',
+      letterSpacing: 'clamp(.08em,.9vw,.16em)',
+      textTransform: 'uppercase',
+      whiteSpace: 'nowrap',
+      transition: 'background .4s cubic-bezier(.2,.8,.2,1),color .4s ease',
+      background: active ? (dark ? '#FDF9F5' : '#071B2B') : 'transparent',
+      color: active ? (dark ? '#071B2B' : '#FDF9F5') : (dark ? 'rgba(253,249,245,.66)' : '#8F9399')
+    };
+  }
+
+  panelStyle(active, tick) {
+    if (!active) return { display: 'none' };
+    return {
+      display: 'block',
+      animation: 'panelIn' + ((tick || 0) % 2 ? 'A' : 'B') + ' 1.6s cubic-bezier(.22,.62,.24,1) both'
+    };
+  }
+
+  accVals(ids) {
+    const out = {};
+    ids.forEach(id => {
+      const open = !!this.state.open[id];
+      out['acc_' + id] = {
+        display: 'grid',
+        gridTemplateRows: open ? '1fr' : '0fr',
+        transition: 'grid-template-rows .55s cubic-bezier(.2,.8,.2,1)'
+      };
+      out['accI_' + id] = {
+        display: 'block',
+        flex: '0 0 auto',
+        font: '300 26px/1 Barlow,sans-serif',
+        color: open ? '#F47F4B' : 'currentColor',
+        transform: open ? 'rotate(45deg)' : 'none',
+        transition: 'transform .45s cubic-bezier(.2,.8,.2,1),color .3s ease'
+      };
+      out['accT_' + id] = () => this.toggle(id);
+    });
+    return out;
+  }
+
+  renderVals() {
+    const b = this.state.boat || '23', c = this.state.craft || 'gp';
+    const bt = this.state.boatTick || 0, ct = this.state.craftTick || 0;
+    const pickBoat = k => () => this.setState(s => ({ boat: k, boatTick: (s.boatTick || 0) + 1 }));
+    const pickCraft = k => () => this.setState(s => ({ craft: k, craftTick: (s.craftTick || 0) + 1 }));
+
+    const lb = this.state.lb, lbI = this.state.lbI;
+    return Object.assign({
+      gal23: this.state.gal23 || '', gal27: this.state.gal27 || '',
+      shotGrid: 'display:grid;grid-template-columns:repeat(' + (this.state.cols || 6) +
+        ',1fr);gap:clamp(5px,.7vw,12px);padding-top:clamp(18px,2vw,26px)',
+      openShot: (e) => {
+        const cell = e.target && e.target.closest && e.target.closest('[data-shot]');
+        if (!cell) return;
+        const cells = Array.prototype.slice.call(cell.parentElement.querySelectorAll('[data-shot]'));
+        const srcs = [];
+        let idx = -1;
+        cells.forEach(c => {
+          const u = this.shotSrc(c);
+          if (!u) return;
+          if (c === cell) idx = srcs.length;
+          srcs.push(u);
+        });
+        if (idx < 0) return;
+        e.preventDefault();
+        document.body.style.overflow = 'hidden';
+        document.body.setAttribute('data-lb', '');
+        this.setState({ lb: srcs, lbI: idx });
+      },
+      closeShot: () => {
+        document.body.style.overflow = '';
+        document.body.removeAttribute('data-lb');
+        this.setState({ lb: null });
+      },
+      stopShot: (e) => e.stopPropagation(),
+      prevShot: (e) => { e.stopPropagation(); this.stepShot(-1); },
+      nextShot: (e) => { e.stopPropagation(); this.stepShot(1); },
+      lbOpen: !!lb,
+      lbThumbs: lb ? lb.map((u, i) => ({
+        on: () => this.setState({ lbI: i }),
+        style: 'width:clamp(46px,5.4vw,74px);aspect-ratio:1/1;object-fit:cover;display:block;cursor:pointer;' +
+          'opacity:' + (i === lbI ? '1' : '.45') + ';outline:' + (i === lbI ? '2px solid #F47F4B' : '1px solid rgba(253,249,245,.22)') +
+          ';outline-offset:-1px;transition:opacity .3s ease,outline-color .3s ease'
+      })) : [],
+      tab23: this.tabStyle(b === '23', false),
+      tab27: this.tabStyle(b === '27', false),
+      ...(() => {
+        const red = this.state.svho === 'red';
+        const tag = on => ({ display: 'inline-flex', alignItems: 'center', gap: '9px', padding: '9px 15px', borderRadius: '999px', cursor: 'pointer', background: 'transparent', font: '400 10px/1 Barlow,sans-serif', letterSpacing: '.18em', textTransform: 'uppercase', whiteSpace: 'nowrap', transition: 'border-color .3s ease,color .3s ease', border: '1px solid ' + (on ? '#FDF9F5' : 'rgba(253,249,245,.26)'), color: on ? '#FDF9F5' : 'rgba(253,249,245,.6)' });
+        const img = (on, base) => ({ width: '100%', height: 'auto', display: 'block', filter: 'drop-shadow(0 40px 60px rgba(0,0,0,.45))', transition: 'opacity .6s ease', opacity: on ? 1 : 0, ...(base ? {} : { position: 'absolute', left: 0, top: '50%', transform: 'translateY(-50%)' }) });
+        return {
+          svhoRedTag: tag(red), svhoBlackTag: tag(!red),
+          svhoBlackImg: img(!red, true), svhoRedImg: img(red, false),
+          svhoRed: () => this.setState({ svho: 'red' }),
+          svhoBlack: () => this.setState({ svho: 'black' })
+        };
+      })(),
+      tab_gp: this.tabStyle(c === 'gp', true),
+      tab_gpa: this.tabStyle(c === 'gpa', true),
+      tab_gph: this.tabStyle(c === 'gph', true),
+      tab_vxc: this.tabStyle(c === 'vxc', true),
+      tab_jb: this.tabStyle(c === 'jb', true),
+      panel_gp: this.panelStyle(c === 'gp', ct),
+      panel_gpa: this.panelStyle(c === 'gpa', ct),
+      panel_gph: this.panelStyle(c === 'gph', ct),
+      panel_vxc: this.panelStyle(c === 'vxc', ct),
+      panel_jb: this.panelStyle(c === 'jb', ct),
+      pick_gp: pickCraft('gp'),
+      pick_gpa: pickCraft('gpa'),
+      pick_gph: pickCraft('gph'),
+      pick_vxc: pickCraft('vxc'),
+      pick_jb: pickCraft('jb'),
+      tabOther: this.tabStyle(b === 'other', false),
+      panelOther: this.panelStyle(b === 'other', bt),
+      pickOther: pickBoat('other'),
+      panel23: this.panelStyle(b === '23', bt),
+      panel27: this.panelStyle(b === '27', bt),
+      pick23: pickBoat('23'),
+      pick27: pickBoat('27'),
+      leadShowForm: (this.state.leadStatus || 'idle') !== 'done',
+      leadDone: this.state.leadStatus === 'done',
+      leadError: this.state.leadStatus === 'error',
+      leadSending: this.state.leadStatus === 'sending',
+      leadSubmitLabel: this.state.leadStatus === 'sending' ? 'Sending…' : 'Send',
+      leadSource: this.leadSource(),
+      leadFormRef: this.leadFormRef || (this.leadFormRef = React.createRef()),
+      closeLead: (e) => {
+        if (e) e.preventDefault();
+        const p = /\/enquire\/?$/.test(window.location.pathname) ? '/' : window.location.pathname;
+        history.replaceState(null, '', p + window.location.search);
+        this.syncLead();
+        window.scrollTo(0, 0);
+        // reset so the next visit starts with a fresh form
+        if (this.state.leadStatus === 'done') this.setState({ leadStatus: 'idle', interests: [], interestErr: false, leadErrs: {} }, () => {
+          const f = this.leadFormRef && this.leadFormRef.current;
+          if (f) f.reset();
+        });
+      },
+      leadSubmit: (e) => {
+        e.preventDefault();
+        const form = e.currentTarget;
+        const v = n => ((form.elements[n] && form.elements[n].value) || '').trim();
+        const errs = {};
+        if (!v('name')) errs.name = 'Please enter your name.';
+        if (!v('email')) errs.email = 'Please enter your email address.';
+        else if (!/@/.test(v('email'))) errs.email = 'Please enter a real email address';
+        else if (!/^[^@\s]+@[^@\s]+\.[A-Za-z]{2,}$/.test(v('email'))) errs.email = 'Please enter a real email address';
+        if (!v('phone')) errs.phone = 'Please enter your phone number.';
+        else if (!/^\+?[0-9]{6,15}$/.test(v('phone'))) errs.phone = 'Please enter a valid number, digits only, e.g. +35699386386';
+        const noInterest = false;
+        this.setState({ leadErrs: errs, interestErr: false });
+        const first = ['name','email','phone'].find(k => errs[k]);
+        if (first) form.elements[first].focus();
+        if (Object.keys(errs).length || noInterest) return;
+        const data = new FormData(form);
+        if (data.get('company')) return; // honeypot
+        this.setState({ leadStatus: 'sending' });
+        // Web3Forms — delivers to the inbox the access key is registered to (info@duomarine.mt).
+        const WEB3FORMS_KEY = window.DUO_WEB3FORMS_KEY || 'YOUR_WEB3FORMS_ACCESS_KEY';
+        const payload = {
+          access_key: WEB3FORMS_KEY,
+          subject: 'Website enquiry: ' + (data.get('name') || 'New lead') + ' — ' + ((this.state.interests || []).join(', ') || 'General'),
+          from_name: 'DUO MARINE Website',
+          replyto: data.get('email') || '',
+          botcheck: '',
+          Name: data.get('name') || '',
+          Email: data.get('email') || '',
+          Phone: data.get('phone') || '',
+          'Interested in': (this.state.interests || []).join(', ') || '—',
+          Message: data.get('message') || '—',
+          Source: data.get('source') || 'website'
+        };
+        // Sandboxed previews and local files: show the success flow without sending.
+        const h = location.hostname;
+        const isPreview = location.protocol === 'file:' || /claudeusercontent\.com$|^localhost$|^127\./.test(h);
+        if (isPreview) {
+          setTimeout(() => {
+            this.setState({ leadStatus: 'done' });
+            const lp = document.getElementById('leadpage');
+            if (lp) lp.scrollTo({ top: 0, behavior: 'smooth' });
+          }, 700);
+          return;
+        }
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify(payload)
+        })
+          .then(r => r.json().then(j => ({ ok: r.ok, j })))
+          .then(({ ok, j }) => {
+            if (!ok || String(j.success) !== 'true') throw new Error(j.message || 'failed');
+            this.setState({ leadStatus: 'done' });
+            const lp = document.getElementById('leadpage');
+            if (lp) lp.scrollTo({ top: 0, behavior: 'smooth' });
+          })
+          .catch(() => {
+            // Fallback that always works: the same details, pre-filled in the visitor's mail app.
+            const body = ['Name: ' + payload.Name, 'Email: ' + payload.Email, 'Phone: ' + payload.Phone,
+              'Interested in: ' + payload['Interested in'], '', payload.Message].join('\n');
+            const mailto = 'mailto:info@duomarine.mt?subject=' + encodeURIComponent(payload.subject) +
+              '&body=' + encodeURIComponent(body);
+            this.setState({ leadStatus: 'error' }, () => {
+              const a = document.querySelector('[data-lead-mailto]');
+              if (a) a.setAttribute('href', mailto);
+            });
+          });
+      },
+      emailInvalid: (e) => {
+        const el = e.currentTarget, v = el.value.trim();
+        if (!v) el.setCustomValidity('Please enter your email address.');
+        else if (!/@/.test(v)) el.setCustomValidity('Your email needs an @ followed by a domain, e.g. name@gmail.com');
+        else el.setCustomValidity('Please use a real domain after the @, e.g. name@gmail.com or name@company.mt');
+      },
+      phoneInput: (e) => {
+        const el = e.currentTarget, v = el.value;
+        const clean = (v.trim().startsWith('+') ? '+' : '') + v.replace(/[^0-9]/g, '');
+        if (clean !== v) el.value = clean;
+      },
+      enq23: () => this.setState({ interests: ['MV 23GT'], interestErr: false }),
+      enqOther: () => this.setState({ interests: ['Other MV Marine model (specify in message)'], interestErr: false }),
+      enq27: () => this.setState({ interests: ['MV 27GT'], interestErr: false }),
+      interestOpts: ['Not sure yet','MV 23GT','MV 27GT','Other MV Marine model (specify in message)'].map(label => {
+        const sel = this.state.interests || [];
+        const on = sel.includes(label);
+        return {
+          label, pressed: on ? 'true' : 'false',
+          style: { minHeight: 44, padding: '0 18px', borderRadius: 999, cursor: 'pointer', font: "400 14px/1 'Funnel Sans',sans-serif",
+            border: '1px solid ' + (on ? '#F47F4B' : 'rgba(253,249,245,.28)'), background: on ? '#F47F4B' : 'transparent',
+            color: on ? '#071B2B' : '#FDF9F5', transition: 'background .25s ease,border-color .25s ease,color .25s ease' },
+          toggle: () => this.setState(s => {
+            const cur = s.interests || [];
+            let next;
+            if (label === 'Not sure yet') next = cur.includes(label) ? [] : [label];
+            else next = cur.includes(label) ? cur.filter(x => x !== label) : cur.filter(x => x !== 'Not sure yet').concat(label);
+            return { interests: next, interestErr: false };
+          })
+        };
+      }),
+      interestErr: !!this.state.interestErr,
+      err: this.state.leadErrs || {},
+      leadInput: (e) => {
+        const n = e.target && e.target.name;
+        if (n && this.state.leadErrs && this.state.leadErrs[n]) this.setState(s => { const x = Object.assign({}, s.leadErrs); delete x[n]; return { leadErrs: x }; });
+      },
+      emailInput: (e) => e.currentTarget.setCustomValidity(''),
+      leadReset: () => {
+        this.setState({ leadStatus: 'idle', interests: [], interestErr: false, leadErrs: {} }, () => {
+          const f = this.leadFormRef && this.leadFormRef.current;
+          if (f) f.reset();
+        });
+      }
+    }, this.navVals(), this.accVals(['c23','d23','s23','e23','f23','c27','d27','s27','e27','f27','tgp','fgp','egp','dgp','egpa','dgpa','egph','dgph','evxc','dvxc','ejb','djb','q1','q2','q3','q4','q5','q6']));
+  }
+}
+
+</script>
+</body>
+</html>
